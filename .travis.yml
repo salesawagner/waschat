@@ -1,0 +1,20 @@
+language: objective-c
+osx_image: xcode8.1
+xcode_project: waschat.xcworkspace
+xcode_scheme: waschat
+xcode_sdk: iphonesimulator10.1
+
+before_install:
+- rm -rf /Users/travis/Library/Developer/Xcode/DerivedData/waschat-*/
+- rvm use $RVM_RUBY_VERSION
+
+install:
+- bundle
+- bundle install --without=documentation --path ../travis_bundle_dir
+
+script:
+- xcodebuild -workspace waschat.xcworkspace -scheme waschat -destination "platform=iOS Simulator,name=iPhone 6s,OS=10.1" clean test | xcpretty
+
+after_success: 
+  - slather
+  - bash <(curl -s https://codecov.io/bash) -f ./TestsReports/cobertura.xml

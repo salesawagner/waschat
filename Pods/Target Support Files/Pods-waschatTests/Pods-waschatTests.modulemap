@@ -1,0 +1,6 @@
+framework module Pods_waschatTests {
+  umbrella header "Pods-waschatTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

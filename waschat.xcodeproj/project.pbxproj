@@ -1,0 +1,758 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		90EC9446516CE73ED558DAA9 /* Pods_waschatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA8AF94B2A55EED5F9C4421 /* Pods_waschatTests.framework */; };
+		A78C469C1DF1957000A97417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78C46701DF1957000A97417 /* Assets.xcassets */; };
+		A78C469D1DF1957000A97417 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A78C46721DF1957000A97417 /* Localizable.strings */; };
+		A78C469E1DF1957000A97417 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A78C46761DF1957000A97417 /* LaunchScreen.storyboard */; };
+		A78C469F1DF1957000A97417 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A78C46771DF1957000A97417 /* Main.storyboard */; };
+		A78C46A01DF1957000A97417 /* Cupertino.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A78C46791DF1957000A97417 /* Cupertino.gpx */; };
+		A78C46A21DF1957000A97417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C467C1DF1957000A97417 /* AppDelegate.swift */; };
+		A78C46A31DF1957000A97417 /* WASTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C467F1DF1957000A97417 /* WASTableViewController.swift */; };
+		A78C46A41DF1957000A97417 /* WASViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46801DF1957000A97417 /* WASViewController.swift */; };
+		A78C46A51DF1957000A97417 /* String+WASString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46831DF1957000A97417 /* String+WASString.swift */; };
+		A78C46A61DF1957000A97417 /* UIColor+WASColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46841DF1957000A97417 /* UIColor+WASColor.swift */; };
+		A78C46A71DF1957000A97417 /* UIFont+WASFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46851DF1957000A97417 /* UIFont+WASFont.swift */; };
+		A78C46A81DF1957000A97417 /* UIImageView+WASImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46861DF1957000A97417 /* UIImageView+WASImageView.swift */; };
+		A78C46A91DF1957000A97417 /* UIView+WASCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46871DF1957000A97417 /* UIView+WASCorner.swift */; };
+		A78C46AA1DF1957000A97417 /* UIViewController+WASViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46881DF1957000A97417 /* UIViewController+WASViewController.swift */; };
+		A78C46AB1DF1957000A97417 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C468A1DF1957000A97417 /* Definitions.swift */; };
+		A78C46AC1DF1957000A97417 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C468C1DF1957000A97417 /* Localized.swift */; };
+		A78C46AE1DF1957000A97417 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46901DF1957000A97417 /* URL.swift */; };
+		A78C46AF1DF1957000A97417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46941DF1957000A97417 /* ViewController.swift */; };
+		A78C46B01DF1957000A97417 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46961DF1957000A97417 /* EmptyViewController.swift */; };
+		CFF2B884AE4442149FCE472F /* Pods_waschat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B39087FF25FAEE103DC4AF /* Pods_waschat.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7AAD4771DF1902200C481ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7AAD45A1DF1902200C481ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7AAD4611DF1902200C481ED;
+			remoteInfo = waschat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1EA8AF94B2A55EED5F9C4421 /* Pods_waschatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_waschatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		204D8E82B22606B4559045F8 /* Pods-waschatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waschatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-waschatTests/Pods-waschatTests.release.xcconfig"; sourceTree = "<group>"; };
+		29B39087FF25FAEE103DC4AF /* Pods_waschat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_waschat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55C5A6BFFD4BD93F4CF16967 /* Pods-waschat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waschat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-waschat/Pods-waschat.debug.xcconfig"; sourceTree = "<group>"; };
+		75ED0032CF379E9D3B16AD33 /* Pods-waschat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waschat.release.xcconfig"; path = "Pods/Target Support Files/Pods-waschat/Pods-waschat.release.xcconfig"; sourceTree = "<group>"; };
+		A78C46701DF1957000A97417 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A78C46731DF1957000A97417 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A78C46761DF1957000A97417 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A78C46771DF1957000A97417 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A78C46791DF1957000A97417 /* Cupertino.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Cupertino.gpx; sourceTree = "<group>"; };
+		A78C467A1DF1957000A97417 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A78C467C1DF1957000A97417 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A78C467F1DF1957000A97417 /* WASTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WASTableViewController.swift; sourceTree = "<group>"; };
+		A78C46801DF1957000A97417 /* WASViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WASViewController.swift; sourceTree = "<group>"; };
+		A78C46831DF1957000A97417 /* String+WASString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+WASString.swift"; sourceTree = "<group>"; };
+		A78C46841DF1957000A97417 /* UIColor+WASColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+WASColor.swift"; sourceTree = "<group>"; };
+		A78C46851DF1957000A97417 /* UIFont+WASFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+WASFont.swift"; sourceTree = "<group>"; };
+		A78C46861DF1957000A97417 /* UIImageView+WASImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+WASImageView.swift"; sourceTree = "<group>"; };
+		A78C46871DF1957000A97417 /* UIView+WASCorner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+WASCorner.swift"; sourceTree = "<group>"; };
+		A78C46881DF1957000A97417 /* UIViewController+WASViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+WASViewController.swift"; sourceTree = "<group>"; };
+		A78C468A1DF1957000A97417 /* Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
+		A78C468C1DF1957000A97417 /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
+		A78C46901DF1957000A97417 /* URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		A78C46941DF1957000A97417 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A78C46961DF1957000A97417 /* EmptyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		A78C469A1DF1957000A97417 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7AAD4621DF1902200C481ED /* waschat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = waschat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7AAD4761DF1902200C481ED /* waschatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = waschatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBFA8DD7FFC81F3719936A10 /* Pods-waschatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waschatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-waschatTests/Pods-waschatTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7AAD45F1DF1902200C481ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFF2B884AE4442149FCE472F /* Pods_waschat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AAD4731DF1902200C481ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90EC9446516CE73ED558DAA9 /* Pods_waschatTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B14C3B8D1DF61CAF3D06015 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B39087FF25FAEE103DC4AF /* Pods_waschat.framework */,
+				1EA8AF94B2A55EED5F9C4421 /* Pods_waschatTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A78C466F1DF1957000A97417 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A78C46701DF1957000A97417 /* Assets.xcassets */,
+				A78C46711DF1957000A97417 /* Language */,
+				A78C46751DF1957000A97417 /* Presentation */,
+				A78C46781DF1957000A97417 /* Supporting Files */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A78C46711DF1957000A97417 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				A78C46721DF1957000A97417 /* Localizable.strings */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		A78C46751DF1957000A97417 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A78C46761DF1957000A97417 /* LaunchScreen.storyboard */,
+				A78C46771DF1957000A97417 /* Main.storyboard */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A78C46781DF1957000A97417 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A78C46791DF1957000A97417 /* Cupertino.gpx */,
+				A78C467A1DF1957000A97417 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A78C467B1DF1957000A97417 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A78C467C1DF1957000A97417 /* AppDelegate.swift */,
+				A78C467D1DF1957000A97417 /* Core */,
+				A78C46921DF1957000A97417 /* Presentation */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A78C467D1DF1957000A97417 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A78C467E1DF1957000A97417 /* Base */,
+				A78C46811DF1957000A97417 /* CustomClasses */,
+				A78C46821DF1957000A97417 /* Extensions */,
+				A78C46891DF1957000A97417 /* Helpers */,
+				A78C468B1DF1957000A97417 /* Language */,
+				A78C468D1DF1957000A97417 /* Models */,
+				A78C468E1DF1957000A97417 /* Network */,
+				A78C46911DF1957000A97417 /* ViewModels */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A78C467E1DF1957000A97417 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A78C467F1DF1957000A97417 /* WASTableViewController.swift */,
+				A78C46801DF1957000A97417 /* WASViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A78C46811DF1957000A97417 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		A78C46821DF1957000A97417 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A78C46831DF1957000A97417 /* String+WASString.swift */,
+				A78C46841DF1957000A97417 /* UIColor+WASColor.swift */,
+				A78C46851DF1957000A97417 /* UIFont+WASFont.swift */,
+				A78C46861DF1957000A97417 /* UIImageView+WASImageView.swift */,
+				A78C46871DF1957000A97417 /* UIView+WASCorner.swift */,
+				A78C46881DF1957000A97417 /* UIViewController+WASViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A78C46891DF1957000A97417 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A78C468A1DF1957000A97417 /* Definitions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A78C468B1DF1957000A97417 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				A78C468C1DF1957000A97417 /* Localized.swift */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		A78C468D1DF1957000A97417 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A78C468E1DF1957000A97417 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A78C46901DF1957000A97417 /* URL.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A78C46911DF1957000A97417 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A78C46921DF1957000A97417 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A78C46931DF1957000A97417 /* Cells */,
+				A78C46941DF1957000A97417 /* ViewController.swift */,
+				A78C46951DF1957000A97417 /* ViewControllers */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A78C46931DF1957000A97417 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A78C46951DF1957000A97417 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A78C46961DF1957000A97417 /* EmptyViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A78C46971DF1957000A97417 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A78C46981DF1957000A97417 /* Resources */,
+				A78C469B1DF1957000A97417 /* Sources */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A78C46981DF1957000A97417 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A78C46991DF1957000A97417 /* Supporting Files */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A78C46991DF1957000A97417 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A78C469A1DF1957000A97417 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A78C469B1DF1957000A97417 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A7AAD4591DF1902200C481ED = {
+			isa = PBXGroup;
+			children = (
+				A78C466F1DF1957000A97417 /* Resources */,
+				A78C467B1DF1957000A97417 /* Sources */,
+				A78C46971DF1957000A97417 /* Tests */,
+				A7AAD4631DF1902200C481ED /* Products */,
+				F044A81A604DE43999D37A1E /* Pods */,
+				6B14C3B8D1DF61CAF3D06015 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A7AAD4631DF1902200C481ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7AAD4621DF1902200C481ED /* waschat.app */,
+				A7AAD4761DF1902200C481ED /* waschatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F044A81A604DE43999D37A1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55C5A6BFFD4BD93F4CF16967 /* Pods-waschat.debug.xcconfig */,
+				75ED0032CF379E9D3B16AD33 /* Pods-waschat.release.xcconfig */,
+				FBFA8DD7FFC81F3719936A10 /* Pods-waschatTests.debug.xcconfig */,
+				204D8E82B22606B4559045F8 /* Pods-waschatTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7AAD4611DF1902200C481ED /* waschat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7AAD47F1DF1902200C481ED /* Build configuration list for PBXNativeTarget "waschat" */;
+			buildPhases = (
+				2562D1A06BD0DC2FF98EB445 /* [CP] Check Pods Manifest.lock */,
+				A7AAD45E1DF1902200C481ED /* Sources */,
+				A7AAD45F1DF1902200C481ED /* Frameworks */,
+				A7AAD4601DF1902200C481ED /* Resources */,
+				8A9789A5748376E2C66116A8 /* [CP] Embed Pods Frameworks */,
+				C7F3EC8A6D1700B0BB1D2E6F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = waschat;
+			productName = waschat;
+			productReference = A7AAD4621DF1902200C481ED /* waschat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A7AAD4751DF1902200C481ED /* waschatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7AAD4821DF1902200C481ED /* Build configuration list for PBXNativeTarget "waschatTests" */;
+			buildPhases = (
+				7EE080E9266E1D0D4ED2A0C3 /* [CP] Check Pods Manifest.lock */,
+				A7AAD4721DF1902200C481ED /* Sources */,
+				A7AAD4731DF1902200C481ED /* Frameworks */,
+				A7AAD4741DF1902200C481ED /* Resources */,
+				0E493DC8C3568CB1C8753B52 /* [CP] Embed Pods Frameworks */,
+				A901AB847925F89307D84303 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7AAD4781DF1902200C481ED /* PBXTargetDependency */,
+			);
+			name = waschatTests;
+			productName = waschatTests;
+			productReference = A7AAD4761DF1902200C481ED /* waschatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7AAD45A1DF1902200C481ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Wagner Sales";
+				TargetAttributes = {
+					A7AAD4611DF1902200C481ED = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					A7AAD4751DF1902200C481ED = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A7AAD4611DF1902200C481ED;
+					};
+				};
+			};
+			buildConfigurationList = A7AAD45D1DF1902200C481ED /* Build configuration list for PBXProject "waschat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A7AAD4591DF1902200C481ED;
+			productRefGroup = A7AAD4631DF1902200C481ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7AAD4611DF1902200C481ED /* waschat */,
+				A7AAD4751DF1902200C481ED /* waschatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7AAD4601DF1902200C481ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A78C46A01DF1957000A97417 /* Cupertino.gpx in Resources */,
+				A78C469E1DF1957000A97417 /* LaunchScreen.storyboard in Resources */,
+				A78C469C1DF1957000A97417 /* Assets.xcassets in Resources */,
+				A78C469D1DF1957000A97417 /* Localizable.strings in Resources */,
+				A78C469F1DF1957000A97417 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AAD4741DF1902200C481ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E493DC8C3568CB1C8753B52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-waschatTests/Pods-waschatTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2562D1A06BD0DC2FF98EB445 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7EE080E9266E1D0D4ED2A0C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8A9789A5748376E2C66116A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-waschat/Pods-waschat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A901AB847925F89307D84303 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-waschatTests/Pods-waschatTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7F3EC8A6D1700B0BB1D2E6F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-waschat/Pods-waschat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7AAD45E1DF1902200C481ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A78C46A41DF1957000A97417 /* WASViewController.swift in Sources */,
+				A78C46A91DF1957000A97417 /* UIView+WASCorner.swift in Sources */,
+				A78C46A61DF1957000A97417 /* UIColor+WASColor.swift in Sources */,
+				A78C46A51DF1957000A97417 /* String+WASString.swift in Sources */,
+				A78C46AF1DF1957000A97417 /* ViewController.swift in Sources */,
+				A78C46AC1DF1957000A97417 /* Localized.swift in Sources */,
+				A78C46AE1DF1957000A97417 /* URL.swift in Sources */,
+				A78C46A71DF1957000A97417 /* UIFont+WASFont.swift in Sources */,
+				A78C46AA1DF1957000A97417 /* UIViewController+WASViewController.swift in Sources */,
+				A78C46A21DF1957000A97417 /* AppDelegate.swift in Sources */,
+				A78C46A31DF1957000A97417 /* WASTableViewController.swift in Sources */,
+				A78C46B01DF1957000A97417 /* EmptyViewController.swift in Sources */,
+				A78C46AB1DF1957000A97417 /* Definitions.swift in Sources */,
+				A78C46A81DF1957000A97417 /* UIImageView+WASImageView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7AAD4721DF1902200C481ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7AAD4781DF1902200C481ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7AAD4611DF1902200C481ED /* waschat */;
+			targetProxy = A7AAD4771DF1902200C481ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A78C46721DF1957000A97417 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A78C46731DF1957000A97417 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7AAD47D1DF1902200C481ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A7AAD47E1DF1902200C481ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7AAD4801DF1902200C481ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55C5A6BFFD4BD93F4CF16967 /* Pods-waschat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.wagnersales.waschat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A7AAD4811DF1902200C481ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75ED0032CF379E9D3B16AD33 /* Pods-waschat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.wagnersales.waschat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A7AAD4831DF1902200C481ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBFA8DD7FFC81F3719936A10 /* Pods-waschatTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Resources/Supporting Files/Info.plist\n";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.wagnersales.waschatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/waschat.app/waschat";
+			};
+			name = Debug;
+		};
+		A7AAD4841DF1902200C481ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 204D8E82B22606B4559045F8 /* Pods-waschatTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Resources/Supporting Files/Info.plist\n";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.wagnersales.waschatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/waschat.app/waschat";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7AAD45D1DF1902200C481ED /* Build configuration list for PBXProject "waschat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7AAD47D1DF1902200C481ED /* Debug */,
+				A7AAD47E1DF1902200C481ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7AAD47F1DF1902200C481ED /* Build configuration list for PBXNativeTarget "waschat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7AAD4801DF1902200C481ED /* Debug */,
+				A7AAD4811DF1902200C481ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7AAD4821DF1902200C481ED /* Build configuration list for PBXNativeTarget "waschatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7AAD4831DF1902200C481ED /* Debug */,
+				A7AAD4841DF1902200C481ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7AAD45A1DF1902200C481ED /* Project object */;
+}
