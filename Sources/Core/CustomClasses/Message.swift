@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  Message.swift
 //  waschat
 //
-//  Created by Wagner Sales on 02/12/16.
+//  Created by Wagner Sales on 04/12/16.
 //  Copyright © 2016 Wagner Sales. All rights reserved.
 //
 
@@ -26,17 +26,27 @@ import UIKit
 //
 //**************************************************************************************************
 
-class ViewController: UIViewController {
-
+class Message: NSObject {
+	
 	//**************************************************
 	// MARK: - Properties
 	//**************************************************
 	
-	@IBOutlet weak var textView: UITextView!
+	let mentions: [String]
+	let emoticons: [String]
+	let colors: [String]
+	let links: [[String : String]]
 	
 	//**************************************************
 	// MARK: - Constructors
 	//**************************************************
+	
+	init(message: String) {
+		self.mentions	= message.mentions()
+		self.emoticons	= message.emoticons()
+		self.colors		= message.colors()
+		self.links		= message.URLs()
+	}
 	
 	//**************************************************
 	// MARK: - Private Methods
@@ -50,20 +60,26 @@ class ViewController: UIViewController {
 	// MARK: - Public Methods
 	//**************************************************
 	
+	func output() -> String {
+		var output = ""
+		var dictionary = [String : [Any]]()
+		dictionary["mentions"]	= self.mentions
+		dictionary["emoticons"] = self.emoticons
+		dictionary["colors"]	= self.colors
+		dictionary["links"]		= self.links
+		do {
+			let data = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
+			if let JSONString = String(data: data, encoding: .utf8) {
+				output = JSONString.replacingOccurrences(of: "\\", with: "")
+			}
+		} catch let e {
+			print("message could not be serialized: \(e)")
+		}
+		return output
+	}
+	
 	//**************************************************
 	// MARK: - Override Public Methods
 	//**************************************************
 	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		let str = "@bob @john @wagner_ @google,@hipchat@pru (success) such a cool feature; http://twitter.com/jdorfman/status/430511497475670016 #00ffff00 salesawagner@gmail.com"
-//		let str = "Olympics are starting soon;https://www.nbcolympics.com"
-		let message = Message(message: str)
-		self.textView.text = message.output()
-		
-		print(message.output())
-		
-	}
-
 }
-

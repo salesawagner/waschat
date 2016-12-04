@@ -1,17 +1,72 @@
-//
-//  String+WASString.swift
-//
-//
-//  Created by Wagner Sales on 30/11/16.
-//  Copyright © 2016 Wagner Sales. All rights reserved.
-//
+//: Playground - noun: a place where people can play
 
 import UIKit
 
-extension String {
-	var WASlocalized: String {
-		return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
+class Link: NSObject {
+	
+	let url: String
+	var title: String = ""
+	
+	init(url: String) {
+		self.url = url
+		if let url = URL(string: url) {
+			do {
+				let contents = try String(contentsOf: url)
+				self.title = contents.URLTitle()
+			} catch let e {
+				print("contents could not be loaded: \(e)")
+			}
+		}
 	}
+	
+	func toDictionary() -> Dictionary<String, String> {
+		var dictionary = [String : String]()
+		dictionary["url"]	= self.url
+		dictionary["title"] = self.title
+		return dictionary
+	}
+}
+
+class Message: NSObject {
+	let mentions: [String]
+	let emoticons: [String]
+	let colors: [String]
+	let links: [Link]
+	
+	init(message: String) {
+		self.mentions	= message.mentions()
+		self.emoticons	= message.emoticons()
+		self.colors		= message.colors()
+		self.links		= message.URLs()
+	}
+	
+	func output() -> String {
+		var output = ""
+		var dictionary = [String : [Any]]()
+		dictionary["mentions"]	= self.mentions
+		dictionary["colors"]	= self.mentions
+		dictionary["emoticons"] = self.emoticons
+		
+		var links = [[String : String]]()
+		for link in self.links {
+			links.append(link.toDictionary())
+		}
+		dictionary["links"] = links
+		
+		do {
+			let data = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
+			if let JSONString = String(data: data, encoding: String.Encoding.utf8) {
+				output = JSONString
+			}
+		} catch let e {
+			print("message could not be serialized: \(e)")
+		}
+		return output
+	}
+}
+
+
+extension String {
 	func trim() -> String {
 		return self.trimmingCharacters(in: .whitespacesAndNewlines)
 	}
@@ -23,7 +78,7 @@ extension String {
 		do {
 			let regex	= try NSRegularExpression(pattern: regex, options: [])
 			let range	= NSMakeRange(0, self.characters.count)
-			let ranges	= regex.matches(in: self, options: .reportCompletion, range: range)
+			let ranges	= regex.matches(in: self.trim(), options: .reportCompletion, range: range)
 			return ranges.map {
 				let nSString = self as NSString
 				return nSString.substring(with: $0.range)
@@ -55,57 +110,21 @@ extension String {
 		}
 		return strings
 	}
-	func URLs() -> [[String : String]] {
-		let regex = "((https?)\\:\\/\\/)[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(\\/\\S*)?\\w+"
+	func URLs() -> [Link] {
+		let regex = "https?://([-\\w\\.]+)+(:\\d+)?(/([\\w/_\\.]*(\\?\\S+)?)?)?"
 		let URLs = self.WASMatchesForRegex(regex: regex)
-		var links = [[String : String]]()
-		for link in URLs {
-			if let url = URL(string: link) {
-				var dictionary = [String : String]()
-				dictionary["url"] = link
-				do {
-					/*
-						errSSLHostNameMismatch -9843 The host name you connected with does not match any of 
-						the host names allowed by the certificate. This is commonly caused by an incorrect 
-						value for the kCFStreamSSLPeerName property within the dictionary associated with 
-						the stream’s kCFStreamPropertySSLSettings key. Available in OS X v10.4 and later.
-					*/
-					let page = try String(contentsOf: url, encoding: .utf8)
-					let title = page.pageTitle()
-					dictionary["title"] = title
-				} catch let erro {
-					print("contents could not be loaded:")
-					print("link: \(link)")
-					print("erro: \(erro)")
-				}
-				links.append(dictionary)
-			}
+		var links = [Link]()
+		for url in URLs {
+			links.append(Link(url: url))
 		}
 		return links
 	}
-	func pageTitle() -> String {
+	func URLTitle() -> String {
 		var string = ""
 		let regex = "(?<=\\<title\\>)(\\s*.*\\s*)(?=\\<\\/title\\>)"
 		let titles = self.WASMatchesForRegex(regex: regex)
 		if let title = titles.first {
 			string = title
-		}
-		
-		let encodedData = string.data(using: .utf8)!
-		let attributedOptions: [String : Any] = [
-			NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
-			NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue
-		]
-		do {
-			let attributedString = try NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
-			string = attributedString.string
-		} catch {
-			print("Error: \(error)")
-		}
-		
-		if string.characters.count > 47 {
-			let index = string.index(string.startIndex, offsetBy: 47)
-//			string = string.substring(to: index) + "..."
 		}
 		return string
 	}
@@ -139,3 +158,9 @@ extension String {
 		return UIColor(red: red, green: green, blue: blue, alpha: alpha)
 	}
 }
+
+var str = "@bob @john @wagner_ @google,@hipchat@pru (success) such a cool feature; http://twitter.com/jdorfman/status/430511497475670016 #00ffff00 salesawagner@gmail.com"
+
+
+let message = Message(message: str)
+message.output()
