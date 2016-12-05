@@ -1,12 +1,75 @@
-//
-//  String+WASString.swift
-//
-//
-//  Created by Wagner Sales on 30/11/16.
-//  Copyright © 2016 Wagner Sales. All rights reserved.
-//
+//: Playground - noun: a place where people can play
 
 import UIKit
+
+class Message: NSObject {
+	
+	//**************************************************
+	// MARK: - Properties
+	//**************************************************
+	
+	let message: String
+	let mentions: [String]
+	let emoticons: [String]
+	let colors: [String]
+	let links: [[String : String]]
+	
+	//**************************************************
+	// MARK: - Constructors
+	//**************************************************
+	
+	init(message: String) {
+		self.message	= message
+		self.mentions	= message.mentions()
+		self.emoticons	= message.emoticons()
+		self.colors		= message.colors()
+		self.links		= message.URLs()
+	}
+	
+	//**************************************************
+	// MARK: - Private Methods
+	//**************************************************
+	
+	//**************************************************
+	// MARK: - Internal Methods
+	//**************************************************
+	
+	//**************************************************
+	// MARK: - Public Methods
+	//**************************************************
+	
+	func output() -> String {
+		var output = ""
+		var dictionary = [String : [Any]]()
+		if self.mentions.count > 0 {
+			dictionary["mentions"] = self.mentions
+		}
+		if self.emoticons.count > 0 {
+			dictionary["emoticons"] = self.emoticons
+		}
+		if self.colors.count > 0 {
+			dictionary["colors"] = self.colors
+		}
+		if self.links.count > 0 {
+			dictionary["links"]	= self.links
+		}
+		do {
+			let data = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
+			if let JSONString = String(data: data, encoding: .utf8) {
+				output = JSONString.replacingOccurrences(of: "\\", with: "")
+			}
+		} catch let e {
+			print("message could not be serialized: \(e)")
+		}
+		return output
+	}
+	
+	//**************************************************
+	// MARK: - Override Public Methods
+	//**************************************************
+	
+}
+
 
 extension String {
 	var WASlocalized: String {
@@ -64,10 +127,10 @@ extension String {
 				dictionary["url"] = link
 				do {
 					/*
-						errSSLHostNameMismatch -9843 The host name you connected with does not match any of 
-						the host names allowed by the certificate. This is commonly caused by an incorrect 
-						value for the kCFStreamSSLPeerName property within the dictionary associated with 
-						the stream’s kCFStreamPropertySSLSettings key. Available in OS X v10.4 and later.
+					errSSLHostNameMismatch -9843 The host name you connected with does not match any of
+					the host names allowed by the certificate. This is commonly caused by an incorrect
+					value for the kCFStreamSSLPeerName property within the dictionary associated with
+					the stream’s kCFStreamPropertySSLSettings key. Available in OS X v10.4 and later.
 					*/
 					let page = try String(contentsOf: url, encoding: .utf8)
 					let title = page.pageTitle()
@@ -89,7 +152,7 @@ extension String {
 		if let title = titles.first {
 			string = title
 		}
-
+		
 		let encodedData = string.data(using: .utf8)!
 		let attributedOptions: [String : Any] = [
 			NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
@@ -140,3 +203,7 @@ extension String {
 		return UIColor(red: red, green: green, blue: blue, alpha: alpha)
 	}
 }
+
+//{\n  "links" : [\n    {\n      "url" : "http://www.nbcolympics.com",\n      "title" : "2016 Rio Olympic Games | NBC Olympics"\n    }\n  ]\n}"
+
+Message(message: "Olympics are starting soon;http://www.nbcolympics.com").output()
