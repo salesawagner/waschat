@@ -9,8 +9,8 @@
 <h2 class="cov_title">
 <span>Coverage for "WASViewController.swift" : </span><span class="cov_low">0.00%</span>
 </h2>
-<h4 class="cov_subtitle">(0 of 7 relevant lines covered)</h4>
-<h4 class="cov_filepath">Sources/Core/Base/WASViewController.swift</h4>
+<h4 class="cov_subtitle">(0 of 11 relevant lines covered)</h4>
+<h4 class="cov_filepath">Sources/Presentation/ViewControllers/WASViewController.swift</h4>
 <table class="source_code">
 <tr class="never">
 <td class="num">1</td>
@@ -19,12 +19,12 @@
 </tr>
 <tr class="never">
 <td class="num">2</td>
-<td class="src"><pre><code class="objc">//  WASViewController.swift</code></pre></td>
+<td class="src"><pre><code class="objc">//  ViewController.swift</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
 <td class="num">3</td>
-<td class="src"><pre><code class="objc">//</code></pre></td>
+<td class="src"><pre><code class="objc">//  waschat</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -34,7 +34,7 @@
 </tr>
 <tr class="never">
 <td class="num">5</td>
-<td class="src"><pre><code class="objc">//  Created by Wagner Sales on 30/11/16.</code></pre></td>
+<td class="src"><pre><code class="objc">//  Created by Wagner Sales on 02/12/16.</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -134,7 +134,7 @@
 </tr>
 <tr class="never">
 <td class="num">25</td>
-<td class="src"><pre><code class="objc">// MARK: - Class -</code></pre></td>
+<td class="src"><pre><code class="objc">// MARK: - Class - BandListViewModel</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -179,22 +179,22 @@
 </tr>
 <tr class="never">
 <td class="num">34</td>
-<td class="src"><pre><code class="objc"></code></pre></td>
+<td class="src"><pre><code class="objc">	</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
 <td class="num">35</td>
-<td class="src"><pre><code class="objc">	//**************************************************</code></pre></td>
+<td class="src"><pre><code class="objc">	var string: String?</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
 <td class="num">36</td>
-<td class="src"><pre><code class="objc">	// MARK: - Constructors</code></pre></td>
+<td class="src"><pre><code class="objc">	@IBOutlet weak var inputLabel: UILabel!</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
 <td class="num">37</td>
-<td class="src"><pre><code class="objc">	//**************************************************</code></pre></td>
+<td class="src"><pre><code class="objc">	@IBOutlet weak var textView: UITextView!</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -209,7 +209,7 @@
 </tr>
 <tr class="never">
 <td class="num">40</td>
-<td class="src"><pre><code class="objc">	// MARK: - Private Methods</code></pre></td>
+<td class="src"><pre><code class="objc">	// MARK: - Constructors</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -229,7 +229,7 @@
 </tr>
 <tr class="never">
 <td class="num">44</td>
-<td class="src"><pre><code class="objc">	// MARK: - Internal Methods</code></pre></td>
+<td class="src"><pre><code class="objc">	// MARK: - Private Methods</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -244,38 +244,38 @@
 </tr>
 <tr class="missed">
 <td class="num">47</td>
-<td class="src"><pre><code class="objc">	internal func setupUI() {</code></pre></td>
+<td class="src"><pre><code class="objc">	private func updateTextView() {</code></pre></td>
 <td class="coverage">!</td>
 </tr>
 <tr class="missed">
 <td class="num">48</td>
-<td class="src"><pre><code class="objc">		self.view.backgroundColor = UIColor.WASBackgroundColor()</code></pre></td>
+<td class="src"><pre><code class="objc">		if let str = self.string {</code></pre></td>
 <td class="coverage">!</td>
 </tr>
 <tr class="missed">
 <td class="num">49</td>
-<td class="src"><pre><code class="objc">	}</code></pre></td>
+<td class="src"><pre><code class="objc">			self.inputLabel.text = str</code></pre></td>
 <td class="coverage">!</td>
 </tr>
-<tr class="never">
+<tr class="missed">
 <td class="num">50</td>
-<td class="src"><pre><code class="objc">	</code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">			let message = Message(message: str)</code></pre></td>
+<td class="coverage">!</td>
 </tr>
-<tr class="never">
+<tr class="missed">
 <td class="num">51</td>
-<td class="src"><pre><code class="objc">	//**************************************************</code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">			self.textView.text = message.output()</code></pre></td>
+<td class="coverage">!</td>
 </tr>
-<tr class="never">
+<tr class="missed">
 <td class="num">52</td>
-<td class="src"><pre><code class="objc">	// MARK: - Public Methods</code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">		}</code></pre></td>
+<td class="coverage">!</td>
 </tr>
-<tr class="never">
+<tr class="missed">
 <td class="num">53</td>
-<td class="src"><pre><code class="objc">	//**************************************************</code></pre></td>
-<td class="coverage"></td>
+<td class="src"><pre><code class="objc">	}</code></pre></td>
+<td class="coverage">!</td>
 </tr>
 <tr class="never">
 <td class="num">54</td>
@@ -289,7 +289,7 @@
 </tr>
 <tr class="never">
 <td class="num">56</td>
-<td class="src"><pre><code class="objc">	// MARK: - Override Public Methods</code></pre></td>
+<td class="src"><pre><code class="objc">	// MARK: - Internal Methods</code></pre></td>
 <td class="coverage"></td>
 </tr>
 <tr class="never">
@@ -302,28 +302,68 @@
 <td class="src"><pre><code class="objc">	</code></pre></td>
 <td class="coverage"></td>
 </tr>
-<tr class="missed">
+<tr class="never">
 <td class="num">59</td>
-<td class="src"><pre><code class="objc">    override func viewDidLoad() {</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">	//**************************************************</code></pre></td>
+<td class="coverage"></td>
 </tr>
-<tr class="missed">
+<tr class="never">
 <td class="num">60</td>
-<td class="src"><pre><code class="objc">        super.viewDidLoad()</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">	// MARK: - Public Methods</code></pre></td>
+<td class="coverage"></td>
 </tr>
-<tr class="missed">
+<tr class="never">
 <td class="num">61</td>
-<td class="src"><pre><code class="objc">		self.setupUI()</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">	//**************************************************</code></pre></td>
+<td class="coverage"></td>
 </tr>
-<tr class="missed">
+<tr class="never">
 <td class="num">62</td>
-<td class="src"><pre><code class="objc">    }</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">	</code></pre></td>
+<td class="coverage"></td>
 </tr>
 <tr class="never">
 <td class="num">63</td>
+<td class="src"><pre><code class="objc">	//**************************************************</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">64</td>
+<td class="src"><pre><code class="objc">	// MARK: - Override Public Methods</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">65</td>
+<td class="src"><pre><code class="objc">	//**************************************************</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="never">
+<td class="num">66</td>
+<td class="src"><pre><code class="objc">	</code></pre></td>
+<td class="coverage"></td>
+</tr>
+<tr class="missed">
+<td class="num">67</td>
+<td class="src"><pre><code class="objc">	override func viewDidLoad() {</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">68</td>
+<td class="src"><pre><code class="objc">		super.viewDidLoad()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">69</td>
+<td class="src"><pre><code class="objc">		self.updateTextView()</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="missed">
+<td class="num">70</td>
+<td class="src"><pre><code class="objc">	}</code></pre></td>
+<td class="coverage">!</td>
+</tr>
+<tr class="never">
+<td class="num">71</td>
 <td class="src"><pre><code class="objc">}</code></pre></td>
 <td class="coverage"></td>
 </tr>

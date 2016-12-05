@@ -10,7 +10,7 @@
 <span>Coverage for "Message.swift" : </span><span class="cov_high">93.75%</span>
 </h2>
 <h4 class="cov_subtitle">(30 of 32 relevant lines covered)</h4>
-<h4 class="cov_filepath">Sources/Core/CustomClasses/Message.swift</h4>
+<h4 class="cov_filepath">Sources/Core/Models/Message.swift</h4>
 <table class="source_code">
 <tr class="never">
 <td class="num">1</td>
@@ -235,37 +235,37 @@
 <tr class="covered">
 <td class="num">45</td>
 <td class="src"><pre><code class="objc">	init(message: String) {</code></pre></td>
-<td class="coverage">16x</td>
+<td class="coverage">15x</td>
 </tr>
 <tr class="covered">
 <td class="num">46</td>
 <td class="src"><pre><code class="objc">		self.message	= message</code></pre></td>
-<td class="coverage">16x</td>
+<td class="coverage">15x</td>
 </tr>
 <tr class="covered">
 <td class="num">47</td>
 <td class="src"><pre><code class="objc">		self.mentions	= message.mentions()</code></pre></td>
-<td class="coverage">16x</td>
+<td class="coverage">15x</td>
 </tr>
 <tr class="covered">
 <td class="num">48</td>
 <td class="src"><pre><code class="objc">		self.emoticons	= message.emoticons()</code></pre></td>
-<td class="coverage">16x</td>
+<td class="coverage">15x</td>
 </tr>
 <tr class="covered">
 <td class="num">49</td>
 <td class="src"><pre><code class="objc">		self.colors		= message.colors()</code></pre></td>
-<td class="coverage">16x</td>
+<td class="coverage">15x</td>
 </tr>
 <tr class="covered">
 <td class="num">50</td>
 <td class="src"><pre><code class="objc">		self.links		= message.URLs()</code></pre></td>
-<td class="coverage">16x</td>
+<td class="coverage">15x</td>
 </tr>
 <tr class="covered">
 <td class="num">51</td>
 <td class="src"><pre><code class="objc">	}</code></pre></td>
-<td class="coverage">16x</td>
+<td class="coverage">15x</td>
 </tr>
 <tr class="never">
 <td class="num">52</td>
@@ -335,102 +335,102 @@
 <tr class="covered">
 <td class="num">65</td>
 <td class="src"><pre><code class="objc">	func output() -&gt; String {</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="covered">
 <td class="num">66</td>
 <td class="src"><pre><code class="objc">		var output = ""</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="covered">
 <td class="num">67</td>
 <td class="src"><pre><code class="objc">		var dictionary = [String : [Any]]()</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="covered">
 <td class="num">68</td>
 <td class="src"><pre><code class="objc">		if self.mentions.count &gt; 0 {</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">69</td>
 <td class="src"><pre><code class="objc">			dictionary["mentions"] = self.mentions</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">70</td>
 <td class="src"><pre><code class="objc">		}</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="covered">
 <td class="num">71</td>
 <td class="src"><pre><code class="objc">		if self.emoticons.count &gt; 0 {</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">72</td>
 <td class="src"><pre><code class="objc">			dictionary["emoticons"] = self.emoticons</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">73</td>
 <td class="src"><pre><code class="objc">		}</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="covered">
 <td class="num">74</td>
 <td class="src"><pre><code class="objc">		if self.colors.count &gt; 0 {</code></pre></td>
-<td class="coverage">2x</td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">75</td>
 <td class="src"><pre><code class="objc">			dictionary["colors"] = self.colors</code></pre></td>
-<td class="coverage">2x</td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="covered">
 <td class="num">76</td>
 <td class="src"><pre><code class="objc">		}</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="covered">
 <td class="num">77</td>
 <td class="src"><pre><code class="objc">		if self.links.count &gt; 0 {</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">78</td>
 <td class="src"><pre><code class="objc">			dictionary["links"]	= self.links</code></pre></td>
-<td class="coverage">3x</td>
+<td class="coverage">2x</td>
 </tr>
 <tr class="covered">
 <td class="num">79</td>
 <td class="src"><pre><code class="objc">		}</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="covered">
 <td class="num">80</td>
 <td class="src"><pre><code class="objc">		do {</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="covered">
 <td class="num">81</td>
 <td class="src"><pre><code class="objc">			let data = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="covered">
 <td class="num">82</td>
 <td class="src"><pre><code class="objc">			if let JSONString = String(data: data, encoding: .utf8) {</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="covered">
 <td class="num">83</td>
 <td class="src"><pre><code class="objc">				output = JSONString.replacingOccurrences(of: "\\", with: "")</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="covered">
 <td class="num">84</td>
 <td class="src"><pre><code class="objc">			}</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="missed">
 <td class="num">85</td>
@@ -445,17 +445,17 @@
 <tr class="covered">
 <td class="num">87</td>
 <td class="src"><pre><code class="objc">		}</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="covered">
 <td class="num">88</td>
 <td class="src"><pre><code class="objc">		return output</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="covered">
 <td class="num">89</td>
 <td class="src"><pre><code class="objc">	}</code></pre></td>
-<td class="coverage">6x</td>
+<td class="coverage">5x</td>
 </tr>
 <tr class="never">
 <td class="num">90</td>

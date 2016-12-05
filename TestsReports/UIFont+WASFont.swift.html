@@ -7,9 +7,9 @@
 <body>
 <header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
 <h2 class="cov_title">
-<span>Coverage for "UIFont+WASFont.swift" : </span><span class="cov_low">0.00%</span>
+<span>Coverage for "UIFont+WASFont.swift" : </span><span class="cov_high">85.71%</span>
 </h2>
-<h4 class="cov_subtitle">(0 of 7 relevant lines covered)</h4>
+<h4 class="cov_subtitle">(6 of 7 relevant lines covered)</h4>
 <h4 class="cov_filepath">Sources/Core/Extensions/UIFont+WASFont.swift</h4>
 <table class="source_code">
 <tr class="never">
@@ -67,40 +67,40 @@
 <td class="src"><pre><code class="objc">extension UIFont {</code></pre></td>
 <td class="coverage"></td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">12</td>
-<td class="src"><pre><code class="objc">	class func WASFontWithSize(_ fontSize: CGFloat = 14) -&gt; UIFont {</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">	class func WASFontWithSize(name: String = "Avenir-Book", _ fontSize: CGFloat = 14) -&gt; UIFont {</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="missed">
 <td class="num">13</td>
 <td class="src"><pre><code class="objc">		return UIFont(name: "Avenir-Book", size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)</code></pre></td>
 <td class="coverage">!</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">14</td>
 <td class="src"><pre><code class="objc">	}</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">15</td>
 <td class="src"><pre><code class="objc">	class func WASnavigationBarFont() -&gt; UIFont {</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">16</td>
 <td class="src"><pre><code class="objc">		let fontSize: CGFloat = 17</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">17</td>
-<td class="src"><pre><code class="objc">		return UIFont(name: "Avenir-Medium", size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">		return UIFont.WASFontWithSize(name: "Avenir-Medium", fontSize)</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">18</td>
 <td class="src"><pre><code class="objc">	}</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="never">
 <td class="num">19</td>

@@ -7,284 +7,281 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		90EC9446516CE73ED558DAA9 /* Pods_waschatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA8AF94B2A55EED5F9C4421 /* Pods_waschatTests.framework */; };
-		A73F4AC21DF19F17009F7D65 /* String+WASUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73F4AC11DF19F17009F7D65 /* String+WASUtil.swift */; };
-		A742823D1DF5148400CBED49 /* WASViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742823C1DF5148400CBED49 /* WASViewController.swift */; };
-		A742823F1DF5173900CBED49 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742823E1DF5173900CBED49 /* TableViewController.swift */; };
-		A74282431DF51CC700CBED49 /* FeelFreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74282421DF51CC700CBED49 /* FeelFreeViewController.swift */; };
-		A7816E551DF520B8009C2BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7816E4F1DF520B8009C2BB6 /* Assets.xcassets */; };
-		A7816E561DF520B8009C2BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7816E511DF520B8009C2BB6 /* LaunchScreen.storyboard */; };
-		A7816E571DF520B8009C2BB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7816E521DF520B8009C2BB6 /* Main.storyboard */; };
-		A7816E5A1DF5221A009C2BB6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7816E591DF5221A009C2BB6 /* Message.swift */; };
-		A78C46A21DF1957000A97417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C467C1DF1957000A97417 /* AppDelegate.swift */; };
-		A78C46A51DF1957000A97417 /* String+WASString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46831DF1957000A97417 /* String+WASString.swift */; };
-		A78C46A61DF1957000A97417 /* UIColor+WASColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46841DF1957000A97417 /* UIColor+WASColor.swift */; };
-		A78C46A71DF1957000A97417 /* UIFont+WASFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46851DF1957000A97417 /* UIFont+WASFont.swift */; };
-		A78C46AB1DF1957000A97417 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C468A1DF1957000A97417 /* Definitions.swift */; };
-		A7F7FC7B1DF4DB9A00EFBEB8 /* WASStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F7FC7A1DF4DB9A00EFBEB8 /* WASStringTests.swift */; };
-		CFF2B884AE4442149FCE472F /* Pods_waschat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B39087FF25FAEE103DC4AF /* Pods_waschat.framework */; };
+		A73162BA1DF528A100F6B98A /* WASStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A6091DF5278000414EA4 /* WASStringTests.swift */; };
+		A778A60A1DF5278000414EA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A778A5E61DF5278000414EA4 /* Assets.xcassets */; };
+		A778A60B1DF5278000414EA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A778A5E81DF5278000414EA4 /* LaunchScreen.storyboard */; };
+		A778A60C1DF5278000414EA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A778A5E91DF5278000414EA4 /* Main.storyboard */; };
+		A778A60E1DF5278000414EA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A5ED1DF5278000414EA4 /* AppDelegate.swift */; };
+		A778A60F1DF5278000414EA4 /* String+WASString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A5F21DF5278000414EA4 /* String+WASString.swift */; };
+		A778A6101DF5278000414EA4 /* String+WASUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A5F31DF5278000414EA4 /* String+WASUtil.swift */; };
+		A778A6111DF5278000414EA4 /* UIColor+WASColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A5F41DF5278000414EA4 /* UIColor+WASColor.swift */; };
+		A778A6121DF5278000414EA4 /* UIFont+WASFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A5F51DF5278000414EA4 /* UIFont+WASFont.swift */; };
+		A778A6131DF5278000414EA4 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A5F71DF5278000414EA4 /* Definitions.swift */; };
+		A778A6141DF5278000414EA4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A5FA1DF5278000414EA4 /* Message.swift */; };
+		A778A6151DF5278000414EA4 /* FeelFreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A6001DF5278000414EA4 /* FeelFreeViewController.swift */; };
+		A778A6161DF5278000414EA4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A6011DF5278000414EA4 /* TableViewController.swift */; };
+		A778A6171DF5278000414EA4 /* WASViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A6021DF5278000414EA4 /* WASViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A7AAD4771DF1902200C481ED /* PBXContainerItemProxy */ = {
+		A72D012E1DF5272500AC5E99 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A7AAD45A1DF1902200C481ED /* Project object */;
+			containerPortal = A72D01111DF5272500AC5E99 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A7AAD4611DF1902200C481ED;
+			remoteGlobalIDString = A72D01181DF5272500AC5E99;
 			remoteInfo = waschat;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1EA8AF94B2A55EED5F9C4421 /* Pods_waschatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_waschatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		204D8E82B22606B4559045F8 /* Pods-waschatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waschatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-waschatTests/Pods-waschatTests.release.xcconfig"; sourceTree = "<group>"; };
-		29B39087FF25FAEE103DC4AF /* Pods_waschat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_waschat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		55C5A6BFFD4BD93F4CF16967 /* Pods-waschat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waschat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-waschat/Pods-waschat.debug.xcconfig"; sourceTree = "<group>"; };
-		75ED0032CF379E9D3B16AD33 /* Pods-waschat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waschat.release.xcconfig"; path = "Pods/Target Support Files/Pods-waschat/Pods-waschat.release.xcconfig"; sourceTree = "<group>"; };
-		A73F4AC11DF19F17009F7D65 /* String+WASUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+WASUtil.swift"; sourceTree = "<group>"; };
-		A742823C1DF5148400CBED49 /* WASViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WASViewController.swift; sourceTree = "<group>"; };
-		A742823E1DF5173900CBED49 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		A74282421DF51CC700CBED49 /* FeelFreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeelFreeViewController.swift; sourceTree = "<group>"; };
-		A7816E4F1DF520B8009C2BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A7816E511DF520B8009C2BB6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A7816E521DF520B8009C2BB6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		A7816E541DF520B8009C2BB6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7816E591DF5221A009C2BB6 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		A78C467C1DF1957000A97417 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A78C46831DF1957000A97417 /* String+WASString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+WASString.swift"; sourceTree = "<group>"; };
-		A78C46841DF1957000A97417 /* UIColor+WASColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+WASColor.swift"; sourceTree = "<group>"; };
-		A78C46851DF1957000A97417 /* UIFont+WASFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+WASFont.swift"; sourceTree = "<group>"; };
-		A78C468A1DF1957000A97417 /* Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
-		A78C469A1DF1957000A97417 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7AAD4621DF1902200C481ED /* waschat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = waschat.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7AAD4761DF1902200C481ED /* waschatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = waschatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7F7FC7A1DF4DB9A00EFBEB8 /* WASStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WASStringTests.swift; path = Extensions/WASStringTests.swift; sourceTree = "<group>"; };
-		FBFA8DD7FFC81F3719936A10 /* Pods-waschatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waschatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-waschatTests/Pods-waschatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A72D01191DF5272500AC5E99 /* waschat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = waschat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A72D012D1DF5272500AC5E99 /* waschatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = waschatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A778A5E61DF5278000414EA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A778A5E81DF5278000414EA4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A778A5E91DF5278000414EA4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A778A5EB1DF5278000414EA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A778A5ED1DF5278000414EA4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A778A5F21DF5278000414EA4 /* String+WASString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+WASString.swift"; sourceTree = "<group>"; };
+		A778A5F31DF5278000414EA4 /* String+WASUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+WASUtil.swift"; sourceTree = "<group>"; };
+		A778A5F41DF5278000414EA4 /* UIColor+WASColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+WASColor.swift"; sourceTree = "<group>"; };
+		A778A5F51DF5278000414EA4 /* UIFont+WASFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+WASFont.swift"; sourceTree = "<group>"; };
+		A778A5F71DF5278000414EA4 /* Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
+		A778A5FA1DF5278000414EA4 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A778A6001DF5278000414EA4 /* FeelFreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeelFreeViewController.swift; sourceTree = "<group>"; };
+		A778A6011DF5278000414EA4 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		A778A6021DF5278000414EA4 /* WASViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WASViewController.swift; sourceTree = "<group>"; };
+		A778A6061DF5278000414EA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A778A6091DF5278000414EA4 /* WASStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WASStringTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A7AAD45F1DF1902200C481ED /* Frameworks */ = {
+		A72D01161DF5272500AC5E99 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFF2B884AE4442149FCE472F /* Pods_waschat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7AAD4731DF1902200C481ED /* Frameworks */ = {
+		A72D012A1DF5272500AC5E99 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90EC9446516CE73ED558DAA9 /* Pods_waschatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6B14C3B8D1DF61CAF3D06015 /* Frameworks */ = {
+		A72D01101DF5272500AC5E99 = {
 			isa = PBXGroup;
 			children = (
-				29B39087FF25FAEE103DC4AF /* Pods_waschat.framework */,
-				1EA8AF94B2A55EED5F9C4421 /* Pods_waschatTests.framework */,
+				A778A5E51DF5278000414EA4 /* Resources */,
+				A778A5EC1DF5278000414EA4 /* Sources */,
+				A778A6031DF5278000414EA4 /* Tests */,
+				A72D011A1DF5272500AC5E99 /* Products */,
 			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A7816E4E1DF520B8009C2BB6 /* Resources */ = {
+		A72D011A1DF5272500AC5E99 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A7816E4F1DF520B8009C2BB6 /* Assets.xcassets */,
-				A7816E501DF520B8009C2BB6 /* Presentation */,
-				A7816E531DF520B8009C2BB6 /* Supporting Files */,
+				A72D01191DF5272500AC5E99 /* waschat.app */,
+				A72D012D1DF5272500AC5E99 /* waschatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A778A5E51DF5278000414EA4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A778A5E61DF5278000414EA4 /* Assets.xcassets */,
+				A778A5E71DF5278000414EA4 /* Presentation */,
+				A778A5EA1DF5278000414EA4 /* Supporting Files */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A7816E501DF520B8009C2BB6 /* Presentation */ = {
+		A778A5E71DF5278000414EA4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				A7816E511DF520B8009C2BB6 /* LaunchScreen.storyboard */,
-				A7816E521DF520B8009C2BB6 /* Main.storyboard */,
+				A778A5E81DF5278000414EA4 /* LaunchScreen.storyboard */,
+				A778A5E91DF5278000414EA4 /* Main.storyboard */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		A7816E531DF520B8009C2BB6 /* Supporting Files */ = {
+		A778A5EA1DF5278000414EA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A7816E541DF520B8009C2BB6 /* Info.plist */,
+				A778A5EB1DF5278000414EA4 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A78C467B1DF1957000A97417 /* Sources */ = {
+		A778A5EC1DF5278000414EA4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A78C467C1DF1957000A97417 /* AppDelegate.swift */,
-				A78C467D1DF1957000A97417 /* Core */,
-				A78C46921DF1957000A97417 /* Presentation */,
+				A778A5ED1DF5278000414EA4 /* AppDelegate.swift */,
+				A778A5EE1DF5278000414EA4 /* Core */,
+				A778A5FD1DF5278000414EA4 /* Presentation */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		A78C467D1DF1957000A97417 /* Core */ = {
+		A778A5EE1DF5278000414EA4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A78C46821DF1957000A97417 /* Extensions */,
-				A78C46891DF1957000A97417 /* Helpers */,
-				A78C468D1DF1957000A97417 /* Models */,
-				A78C46911DF1957000A97417 /* ViewModels */,
+				A778A5EF1DF5278000414EA4 /* Base */,
+				A778A5F01DF5278000414EA4 /* CustomClasses */,
+				A778A5F11DF5278000414EA4 /* Extensions */,
+				A778A5F61DF5278000414EA4 /* Helpers */,
+				A778A5F81DF5278000414EA4 /* Language */,
+				A778A5F91DF5278000414EA4 /* Models */,
+				A778A5FB1DF5278000414EA4 /* Network */,
+				A778A5FC1DF5278000414EA4 /* ViewModels */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		A78C46821DF1957000A97417 /* Extensions */ = {
+		A778A5EF1DF5278000414EA4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				A73F4AC11DF19F17009F7D65 /* String+WASUtil.swift */,
-				A78C46831DF1957000A97417 /* String+WASString.swift */,
-				A78C46841DF1957000A97417 /* UIColor+WASColor.swift */,
-				A78C46851DF1957000A97417 /* UIFont+WASFont.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A778A5F01DF5278000414EA4 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		A778A5F11DF5278000414EA4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A778A5F21DF5278000414EA4 /* String+WASString.swift */,
+				A778A5F31DF5278000414EA4 /* String+WASUtil.swift */,
+				A778A5F41DF5278000414EA4 /* UIColor+WASColor.swift */,
+				A778A5F51DF5278000414EA4 /* UIFont+WASFont.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		A78C46891DF1957000A97417 /* Helpers */ = {
+		A778A5F61DF5278000414EA4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				A78C468A1DF1957000A97417 /* Definitions.swift */,
+				A778A5F71DF5278000414EA4 /* Definitions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		A78C468D1DF1957000A97417 /* Models */ = {
+		A778A5F81DF5278000414EA4 /* Language */ = {
 			isa = PBXGroup;
 			children = (
-				A7816E591DF5221A009C2BB6 /* Message.swift */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		A778A5F91DF5278000414EA4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A778A5FA1DF5278000414EA4 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		A78C46911DF1957000A97417 /* ViewModels */ = {
+		A778A5FB1DF5278000414EA4 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A778A5FC1DF5278000414EA4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		A78C46921DF1957000A97417 /* Presentation */ = {
+		A778A5FD1DF5278000414EA4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				A78C46931DF1957000A97417 /* Cells */,
-				A78C46951DF1957000A97417 /* ViewControllers */,
+				A778A5FE1DF5278000414EA4 /* Cells */,
+				A778A5FF1DF5278000414EA4 /* ViewControllers */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		A78C46931DF1957000A97417 /* Cells */ = {
+		A778A5FE1DF5278000414EA4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		A78C46951DF1957000A97417 /* ViewControllers */ = {
+		A778A5FF1DF5278000414EA4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A74282421DF51CC700CBED49 /* FeelFreeViewController.swift */,
-				A742823C1DF5148400CBED49 /* WASViewController.swift */,
-				A742823E1DF5173900CBED49 /* TableViewController.swift */,
+				A778A6001DF5278000414EA4 /* FeelFreeViewController.swift */,
+				A778A6011DF5278000414EA4 /* TableViewController.swift */,
+				A778A6021DF5278000414EA4 /* WASViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		A78C46971DF1957000A97417 /* Tests */ = {
+		A778A6031DF5278000414EA4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A78C46981DF1957000A97417 /* Resources */,
-				A78C469B1DF1957000A97417 /* Sources */,
+				A778A6041DF5278000414EA4 /* Resources */,
+				A778A6071DF5278000414EA4 /* Sources */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		A78C46981DF1957000A97417 /* Resources */ = {
+		A778A6041DF5278000414EA4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A78C46991DF1957000A97417 /* Supporting Files */,
+				A778A6051DF5278000414EA4 /* Supporting Files */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A78C46991DF1957000A97417 /* Supporting Files */ = {
+		A778A6051DF5278000414EA4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A78C469A1DF1957000A97417 /* Info.plist */,
+				A778A6061DF5278000414EA4 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A78C469B1DF1957000A97417 /* Sources */ = {
+		A778A6071DF5278000414EA4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A7F7FC791DF4DB7600EFBEB8 /* Extension */,
+				A778A6081DF5278000414EA4 /* Extensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		A7AAD4591DF1902200C481ED = {
+		A778A6081DF5278000414EA4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				A7816E4E1DF520B8009C2BB6 /* Resources */,
-				A78C467B1DF1957000A97417 /* Sources */,
-				A78C46971DF1957000A97417 /* Tests */,
-				A7AAD4631DF1902200C481ED /* Products */,
-				F044A81A604DE43999D37A1E /* Pods */,
-				6B14C3B8D1DF61CAF3D06015 /* Frameworks */,
+				A778A6091DF5278000414EA4 /* WASStringTests.swift */,
 			);
-			sourceTree = "<group>";
-		};
-		A7AAD4631DF1902200C481ED /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A7AAD4621DF1902200C481ED /* waschat.app */,
-				A7AAD4761DF1902200C481ED /* waschatTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A7F7FC791DF4DB7600EFBEB8 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				A7F7FC7A1DF4DB9A00EFBEB8 /* WASStringTests.swift */,
-			);
-			name = Extension;
-			sourceTree = "<group>";
-		};
-		F044A81A604DE43999D37A1E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				55C5A6BFFD4BD93F4CF16967 /* Pods-waschat.debug.xcconfig */,
-				75ED0032CF379E9D3B16AD33 /* Pods-waschat.release.xcconfig */,
-				FBFA8DD7FFC81F3719936A10 /* Pods-waschatTests.debug.xcconfig */,
-				204D8E82B22606B4559045F8 /* Pods-waschatTests.release.xcconfig */,
-			);
-			name = Pods;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A7AAD4611DF1902200C481ED /* waschat */ = {
+		A72D01181DF5272500AC5E99 /* waschat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7AAD47F1DF1902200C481ED /* Build configuration list for PBXNativeTarget "waschat" */;
+			buildConfigurationList = A72D01361DF5272600AC5E99 /* Build configuration list for PBXNativeTarget "waschat" */;
 			buildPhases = (
-				2562D1A06BD0DC2FF98EB445 /* [CP] Check Pods Manifest.lock */,
-				A7AAD45E1DF1902200C481ED /* Sources */,
-				A7AAD45F1DF1902200C481ED /* Frameworks */,
-				A7AAD4601DF1902200C481ED /* Resources */,
-				8A9789A5748376E2C66116A8 /* [CP] Embed Pods Frameworks */,
-				C7F3EC8A6D1700B0BB1D2E6F /* [CP] Copy Pods Resources */,
+				A72D01151DF5272500AC5E99 /* Sources */,
+				A72D01161DF5272500AC5E99 /* Frameworks */,
+				A72D01171DF5272500AC5E99 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -292,53 +289,51 @@
 			);
 			name = waschat;
 			productName = waschat;
-			productReference = A7AAD4621DF1902200C481ED /* waschat.app */;
+			productReference = A72D01191DF5272500AC5E99 /* waschat.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A7AAD4751DF1902200C481ED /* waschatTests */ = {
+		A72D012C1DF5272500AC5E99 /* waschatTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A7AAD4821DF1902200C481ED /* Build configuration list for PBXNativeTarget "waschatTests" */;
+			buildConfigurationList = A72D01391DF5272600AC5E99 /* Build configuration list for PBXNativeTarget "waschatTests" */;
 			buildPhases = (
-				7EE080E9266E1D0D4ED2A0C3 /* [CP] Check Pods Manifest.lock */,
-				A7AAD4721DF1902200C481ED /* Sources */,
-				A7AAD4731DF1902200C481ED /* Frameworks */,
-				A7AAD4741DF1902200C481ED /* Resources */,
-				0E493DC8C3568CB1C8753B52 /* [CP] Embed Pods Frameworks */,
-				A901AB847925F89307D84303 /* [CP] Copy Pods Resources */,
+				A72D01291DF5272500AC5E99 /* Sources */,
+				A72D012A1DF5272500AC5E99 /* Frameworks */,
+				A72D012B1DF5272500AC5E99 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A7AAD4781DF1902200C481ED /* PBXTargetDependency */,
+				A72D012F1DF5272500AC5E99 /* PBXTargetDependency */,
 			);
 			name = waschatTests;
 			productName = waschatTests;
-			productReference = A7AAD4761DF1902200C481ED /* waschatTests.xctest */;
+			productReference = A72D012D1DF5272500AC5E99 /* waschatTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A7AAD45A1DF1902200C481ED /* Project object */ = {
+		A72D01111DF5272500AC5E99 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Wagner Sales";
 				TargetAttributes = {
-					A7AAD4611DF1902200C481ED = {
+					A72D01181DF5272500AC5E99 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = B6M4H2TQY8;
 						ProvisioningStyle = Automatic;
 					};
-					A7AAD4751DF1902200C481ED = {
+					A72D012C1DF5272500AC5E99 = {
 						CreatedOnToolsVersion = 8.1;
-						LastSwiftMigration = 0810;
+						DevelopmentTeam = B6M4H2TQY8;
 						ProvisioningStyle = Automatic;
-						TestTargetID = A7AAD4611DF1902200C481ED;
+						TestTargetID = A72D01181DF5272500AC5E99;
 					};
 				};
 			};
-			buildConfigurationList = A7AAD45D1DF1902200C481ED /* Build configuration list for PBXProject "waschat" */;
+			buildConfigurationList = A72D01141DF5272500AC5E99 /* Build configuration list for PBXProject "waschat" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -346,29 +341,29 @@
 				en,
 				Base,
 			);
-			mainGroup = A7AAD4591DF1902200C481ED;
-			productRefGroup = A7AAD4631DF1902200C481ED /* Products */;
+			mainGroup = A72D01101DF5272500AC5E99;
+			productRefGroup = A72D011A1DF5272500AC5E99 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A7AAD4611DF1902200C481ED /* waschat */,
-				A7AAD4751DF1902200C481ED /* waschatTests */,
+				A72D01181DF5272500AC5E99 /* waschat */,
+				A72D012C1DF5272500AC5E99 /* waschatTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A7AAD4601DF1902200C481ED /* Resources */ = {
+		A72D01171DF5272500AC5E99 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7816E571DF520B8009C2BB6 /* Main.storyboard in Resources */,
-				A7816E551DF520B8009C2BB6 /* Assets.xcassets in Resources */,
-				A7816E561DF520B8009C2BB6 /* LaunchScreen.storyboard in Resources */,
+				A778A60C1DF5278000414EA4 /* Main.storyboard in Resources */,
+				A778A60A1DF5278000414EA4 /* Assets.xcassets in Resources */,
+				A778A60B1DF5278000414EA4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7AAD4741DF1902200C481ED /* Resources */ = {
+		A72D012B1DF5272500AC5E99 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -377,141 +372,47 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		0E493DC8C3568CB1C8753B52 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-waschatTests/Pods-waschatTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2562D1A06BD0DC2FF98EB445 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7EE080E9266E1D0D4ED2A0C3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8A9789A5748376E2C66116A8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-waschat/Pods-waschat-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A901AB847925F89307D84303 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-waschatTests/Pods-waschatTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C7F3EC8A6D1700B0BB1D2E6F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-waschat/Pods-waschat-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		A7AAD45E1DF1902200C481ED /* Sources */ = {
+		A72D01151DF5272500AC5E99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A78C46A61DF1957000A97417 /* UIColor+WASColor.swift in Sources */,
-				A78C46A51DF1957000A97417 /* String+WASString.swift in Sources */,
-				A74282431DF51CC700CBED49 /* FeelFreeViewController.swift in Sources */,
-				A78C46A71DF1957000A97417 /* UIFont+WASFont.swift in Sources */,
-				A78C46A21DF1957000A97417 /* AppDelegate.swift in Sources */,
-				A73F4AC21DF19F17009F7D65 /* String+WASUtil.swift in Sources */,
-				A7816E5A1DF5221A009C2BB6 /* Message.swift in Sources */,
-				A78C46AB1DF1957000A97417 /* Definitions.swift in Sources */,
-				A742823F1DF5173900CBED49 /* TableViewController.swift in Sources */,
-				A742823D1DF5148400CBED49 /* WASViewController.swift in Sources */,
+				A778A6121DF5278000414EA4 /* UIFont+WASFont.swift in Sources */,
+				A778A60E1DF5278000414EA4 /* AppDelegate.swift in Sources */,
+				A778A6101DF5278000414EA4 /* String+WASUtil.swift in Sources */,
+				A778A60F1DF5278000414EA4 /* String+WASString.swift in Sources */,
+				A778A6151DF5278000414EA4 /* FeelFreeViewController.swift in Sources */,
+				A778A6131DF5278000414EA4 /* Definitions.swift in Sources */,
+				A778A6171DF5278000414EA4 /* WASViewController.swift in Sources */,
+				A778A6111DF5278000414EA4 /* UIColor+WASColor.swift in Sources */,
+				A778A6161DF5278000414EA4 /* TableViewController.swift in Sources */,
+				A778A6141DF5278000414EA4 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7AAD4721DF1902200C481ED /* Sources */ = {
+		A72D01291DF5272500AC5E99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7F7FC7B1DF4DB9A00EFBEB8 /* WASStringTests.swift in Sources */,
+				A73162BA1DF528A100F6B98A /* WASStringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A7AAD4781DF1902200C481ED /* PBXTargetDependency */ = {
+		A72D012F1DF5272500AC5E99 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A7AAD4611DF1902200C481ED /* waschat */;
-			targetProxy = A7AAD4771DF1902200C481ED /* PBXContainerItemProxy */;
+			target = A72D01181DF5272500AC5E99 /* waschat */;
+			targetProxy = A72D012E1DF5272500AC5E99 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		A7AAD47D1DF1902200C481ED /* Debug */ = {
+		A72D01341DF5272500AC5E99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -526,7 +427,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -559,11 +459,10 @@
 			};
 			name = Debug;
 		};
-		A7AAD47E1DF1902200C481ED /* Release */ = {
+		A72D01351DF5272500AC5E99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -578,7 +477,6 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -604,11 +502,11 @@
 			};
 			name = Release;
 		};
-		A7AAD4801DF1902200C481ED /* Debug */ = {
+		A72D01371DF5272600AC5E99 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 55C5A6BFFD4BD93F4CF16967 /* Pods-waschat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B6M4H2TQY8;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.wagnersales.waschat;
@@ -617,11 +515,11 @@
 			};
 			name = Debug;
 		};
-		A7AAD4811DF1902200C481ED /* Release */ = {
+		A72D01381DF5272600AC5E99 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75ED0032CF379E9D3B16AD33 /* Pods-waschat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B6M4H2TQY8;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.wagnersales.waschat;
@@ -630,30 +528,27 @@
 			};
 			name = Release;
 		};
-		A7AAD4831DF1902200C481ED /* Debug */ = {
+		A72D013A1DF5272600AC5E99 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBFA8DD7FFC81F3719936A10 /* Pods-waschatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = B6M4H2TQY8;
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/Resources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.wagnersales.waschatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/waschat.app/waschat";
 			};
 			name = Debug;
 		};
-		A7AAD4841DF1902200C481ED /* Release */ = {
+		A72D013B1DF5272600AC5E99 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 204D8E82B22606B4559045F8 /* Pods-waschatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = B6M4H2TQY8;
 				INFOPLIST_FILE = "$(SRCROOT)/Tests/Resources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.wagnersales.waschatTests;
@@ -666,34 +561,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A7AAD45D1DF1902200C481ED /* Build configuration list for PBXProject "waschat" */ = {
+		A72D01141DF5272500AC5E99 /* Build configuration list for PBXProject "waschat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A7AAD47D1DF1902200C481ED /* Debug */,
-				A7AAD47E1DF1902200C481ED /* Release */,
+				A72D01341DF5272500AC5E99 /* Debug */,
+				A72D01351DF5272500AC5E99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A7AAD47F1DF1902200C481ED /* Build configuration list for PBXNativeTarget "waschat" */ = {
+		A72D01361DF5272600AC5E99 /* Build configuration list for PBXNativeTarget "waschat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A7AAD4801DF1902200C481ED /* Debug */,
-				A7AAD4811DF1902200C481ED /* Release */,
+				A72D01371DF5272600AC5E99 /* Debug */,
+				A72D01381DF5272600AC5E99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A7AAD4821DF1902200C481ED /* Build configuration list for PBXNativeTarget "waschatTests" */ = {
+		A72D01391DF5272600AC5E99 /* Build configuration list for PBXNativeTarget "waschatTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A7AAD4831DF1902200C481ED /* Debug */,
-				A7AAD4841DF1902200C481ED /* Release */,
+				A72D013A1DF5272600AC5E99 /* Debug */,
+				A72D013B1DF5272600AC5E99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A7AAD45A1DF1902200C481ED /* Project object */;
+	rootObject = A72D01111DF5272500AC5E99 /* Project object */;
 }

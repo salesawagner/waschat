@@ -7,9 +7,9 @@
 <body>
 <header><div class="row"><a href="index.html"><img src="logo.jpg" alt="Slather logo"></a></div></header><div class="row"><div id="reports">
 <h2 class="cov_title">
-<span>Coverage for "UIColor+WASColor.swift" : </span><span class="cov_low">0.00%</span>
+<span>Coverage for "UIColor+WASColor.swift" : </span><span class="cov_high">100.00%</span>
 </h2>
-<h4 class="cov_subtitle">(0 of 29 relevant lines covered)</h4>
+<h4 class="cov_subtitle">(10 of 10 relevant lines covered)</h4>
 <h4 class="cov_filepath">Sources/Core/Extensions/UIColor+WASColor.swift</h4>
 <table class="source_code">
 <tr class="never">
@@ -122,168 +122,63 @@
 <td class="src"><pre><code class="objc">	*/</code></pre></td>
 <td class="coverage"></td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">23</td>
 <td class="src"><pre><code class="objc">	convenience init(r: Int, g: Int, b: Int, a: CGFloat) {</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">24</td>
 <td class="src"><pre><code class="objc">		</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">25</td>
 <td class="src"><pre><code class="objc">		let red		= CGFloat(r) / 255.0</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">26</td>
 <td class="src"><pre><code class="objc">		let green	= CGFloat(g) / 255.0</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">27</td>
 <td class="src"><pre><code class="objc">		let blue	= CGFloat(b) / 255.0</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">28</td>
 <td class="src"><pre><code class="objc">		self.init(red: red, green: green, blue: blue, alpha: CGFloat(a))</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">29</td>
 <td class="src"><pre><code class="objc">	}</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="never">
 <td class="num">30</td>
 <td class="src"><pre><code class="objc">	</code></pre></td>
 <td class="coverage"></td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">31</td>
-<td class="src"><pre><code class="objc">	public func WASColorToUInt() -&gt; UInt? {</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">	class func WASBlueColor() -&gt; UIColor {</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">32</td>
-<td class="src"><pre><code class="objc">		</code></pre></td>
-<td class="coverage">!</td>
+<td class="src"><pre><code class="objc">		return UIColor(r: 119, g: 179, b: 212, a: 1)</code></pre></td>
+<td class="coverage">1x</td>
 </tr>
-<tr class="missed">
+<tr class="covered">
 <td class="num">33</td>
-<td class="src"><pre><code class="objc">		var intColor: UInt?</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">34</td>
-<td class="src"><pre><code class="objc">		</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">35</td>
-<td class="src"><pre><code class="objc">		var fRed : CGFloat = 0, fGreen : CGFloat = 0, fBlue : CGFloat = 0, fAlpha: CGFloat = 0</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">36</td>
-<td class="src"><pre><code class="objc">		if self.getRed(&amp;fRed, green: &amp;fGreen, blue: &amp;fBlue, alpha: &amp;fAlpha) {</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">37</td>
-<td class="src"><pre><code class="objc">			let iRed	= UInt(fRed * 255.0)</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">38</td>
-<td class="src"><pre><code class="objc">			let iGreen	= UInt(fGreen * 255.0)</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">39</td>
-<td class="src"><pre><code class="objc">			let iBlue	= UInt(fBlue * 255.0)</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">40</td>
-<td class="src"><pre><code class="objc">			let iAlpha	= UInt(fAlpha * 255.0)</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">41</td>
-<td class="src"><pre><code class="objc">			</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">42</td>
-<td class="src"><pre><code class="objc">			intColor = (iAlpha &lt;&lt; 24) + (iRed &lt;&lt; 16) + (iGreen &lt;&lt; 8) + iBlue</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">43</td>
-<td class="src"><pre><code class="objc">		}</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">44</td>
-<td class="src"><pre><code class="objc">		</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">45</td>
-<td class="src"><pre><code class="objc">		return intColor</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">46</td>
-<td class="src"><pre><code class="objc">	}</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="never">
-<td class="num">47</td>
-<td class="src"><pre><code class="objc">	</code></pre></td>
-<td class="coverage"></td>
-</tr>
-<tr class="missed">
-<td class="num">48</td>
-<td class="src"><pre><code class="objc">	class func WASBackgroundColor() -&gt; UIColor {</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">49</td>
-<td class="src"><pre><code class="objc">		return UIColor(r: 248, g: 248, b: 248, a: 1)</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">50</td>
-<td class="src"><pre><code class="objc">	}</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="never">
-<td class="num">51</td>
-<td class="src"><pre><code class="objc">	</code></pre></td>
-<td class="coverage"></td>
-</tr>
-<tr class="missed">
-<td class="num">52</td>
-<td class="src"><pre><code class="objc">	class func WASRedColor() -&gt; UIColor {</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">53</td>
-<td class="src"><pre><code class="objc">		return UIColor(r: 208, g: 2, b: 27, a: 1)</code></pre></td>
-<td class="coverage">!</td>
-</tr>
-<tr class="missed">
-<td class="num">54</td>
 <td class="src"><pre><code class="objc">	}	</code></pre></td>
-<td class="coverage">!</td>
+<td class="coverage">1x</td>
 </tr>
 <tr class="never">
-<td class="num">55</td>
+<td class="num">34</td>
 <td class="src"><pre><code class="objc">}</code></pre></td>
 <td class="coverage"></td>
 </tr>
