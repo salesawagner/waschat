@@ -9,29 +9,6 @@
 import UIKit
 
 extension String {
-	var WASlocalized: String {
-		return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
-	}
-	func trim() -> String {
-		return self.trimmingCharacters(in: .whitespacesAndNewlines)
-	}
-	func remove(_ string: String) -> String {
-		return self.replacingOccurrences(of: string, with: "")
-	}
-	func WASMatchesForRegex(regex: String) -> [String] {
-		do {
-			let regex	= try NSRegularExpression(pattern: regex, options: [])
-			let range	= NSMakeRange(0, self.characters.count)
-			let ranges	= regex.matches(in: self, options: .reportCompletion, range: range)
-			return ranges.map {
-				let nSString = self as NSString
-				return nSString.substring(with: $0.range)
-			}
-		} catch let e {
-			print("WASMatchesForRegex error: \(e)")
-		}
-		return [""]
-	}
 	func mentions() -> [String] {
 		var strings = [String]()
 		let regex = String(format: "(?<=\\W|^)@(\\w+)")
@@ -44,9 +21,8 @@ extension String {
 	}
 	func emoticons() -> [String] {
 		var strings = [String]()
-		let regex = "\\(([a-z]+)\\)"
+		let regex = "\\(([A-za-z0-9]{1,15})\\)"
 		let emoticons = self.WASMatchesForRegex(regex: regex)
-		
 		for emoticon in emoticons {
 			var string = emoticon
 			string = string.remove("(").remove(")")

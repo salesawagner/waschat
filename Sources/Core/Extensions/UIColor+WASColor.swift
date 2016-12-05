@@ -28,28 +28,7 @@ extension UIColor {
 		self.init(red: red, green: green, blue: blue, alpha: CGFloat(a))
 	}
 	
-	public func WASColorToUInt() -> UInt? {
-		
-		var intColor: UInt?
-		
-		var fRed : CGFloat = 0, fGreen : CGFloat = 0, fBlue : CGFloat = 0, fAlpha: CGFloat = 0
-		if self.getRed(&fRed, green: &fGreen, blue: &fBlue, alpha: &fAlpha) {
-			let iRed	= UInt(fRed * 255.0)
-			let iGreen	= UInt(fGreen * 255.0)
-			let iBlue	= UInt(fBlue * 255.0)
-			let iAlpha	= UInt(fAlpha * 255.0)
-			
-			intColor = (iAlpha << 24) + (iRed << 16) + (iGreen << 8) + iBlue
-		}
-		
-		return intColor
-	}
-	
-	class func WASBackgroundColor() -> UIColor {
-		return UIColor(r: 248, g: 248, b: 248, a: 1)
-	}
-	
-	class func WASRedColor() -> UIColor {
-		return UIColor(r: 208, g: 2, b: 27, a: 1)
+	class func WASBlueColor() -> UIColor {
+		return UIColor(r: 119, g: 179, b: 212, a: 1)
 	}	
 }

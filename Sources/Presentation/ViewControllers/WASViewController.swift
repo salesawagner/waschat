@@ -1,8 +1,8 @@
 //
-//  WASTableViewController.swift
+//  ViewController.swift
+//  waschat
 //
-//
-//  Created by Wagner Sales on 30/11/16.
+//  Created by Wagner Sales on 02/12/16.
 //  Copyright © 2016 Wagner Sales. All rights reserved.
 //
 
@@ -22,17 +22,19 @@ import UIKit
 
 //**************************************************************************************************
 //
-// MARK: - Class -
+// MARK: - Class - BandListViewModel
 //
 //**************************************************************************************************
 
-class WASTableViewController: WASViewController {
+class WASViewController: UIViewController {
 
 	//**************************************************
 	// MARK: - Properties
 	//**************************************************
 	
-	@IBOutlet weak var tableView: UITableView!
+	var string: String?
+	@IBOutlet weak var inputLabel: UILabel!
+	@IBOutlet weak var textView: UITextView!
 	
 	//**************************************************
 	// MARK: - Constructors
@@ -42,17 +44,17 @@ class WASTableViewController: WASViewController {
 	// MARK: - Private Methods
 	//**************************************************
 	
+	private func updateTextView() {
+		if let str = self.string {
+			self.inputLabel.text = str
+			let message = Message(message: str)
+			self.textView.text = message.output()
+		}
+	}
+	
 	//**************************************************
 	// MARK: - Internal Methods
 	//**************************************************
-	
-	internal func setuptableView() {
-		self.tableView.rowHeight						= UITableViewAutomaticDimension
-		self.tableView.sectionFooterHeight				= 0
-		self.tableView.tableFooterView					= UIView()
-		self.tableView.showsVerticalScrollIndicator		= false
-		self.tableView.showsHorizontalScrollIndicator	= false
-	}
 	
 	//**************************************************
 	// MARK: - Public Methods
@@ -62,12 +64,8 @@ class WASTableViewController: WASViewController {
 	// MARK: - Override Public Methods
 	//**************************************************
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
-	override func setupUI() {
-		super.setupUI()
-		self.setuptableView()
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		self.updateTextView()
 	}
 }

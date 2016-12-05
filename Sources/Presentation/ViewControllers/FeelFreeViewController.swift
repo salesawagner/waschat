@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FeelFreeViewController.swift
 //  waschat
 //
 //  Created by Wagner Sales on 02/12/16.
@@ -26,7 +26,7 @@ import UIKit
 //
 //**************************************************************************************************
 
-class ViewController: UIViewController {
+class FeelFreeViewController: UIViewController {
 
 	//**************************************************
 	// MARK: - Properties
@@ -35,9 +35,11 @@ class ViewController: UIViewController {
 	var string: String? {
 		didSet {
 			self.textField.text = ""
+			self.inputLabel.text = self.string
 			self.updateTextView()
 		}
 	}
+	@IBOutlet weak var inputLabel: UILabel!
 	@IBOutlet weak var textView: UITextView!
 	@IBOutlet weak var textField: UITextField!
 	@IBOutlet weak var bottomConstraint: NSLayoutConstraint!
@@ -120,7 +122,6 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.setupKeyBoardNotifications()
-		self.string = "@bob @john @wagner_ @google,@hipchat@pru (success) such a cool feature; http://twitter.com/jdorfman/status/430511497475670016 #00ffff00 salesawagner@gmail.com"
 	}
 	
 	deinit {
@@ -128,7 +129,6 @@ class ViewController: UIViewController {
 		notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
 		notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
 	}
-
 }
 
 //**********************************************************************************************************
@@ -136,7 +136,8 @@ class ViewController: UIViewController {
 // MARK: - Extension - UITextFieldDelegate
 //
 //**********************************************************************************************************
-extension ViewController: UITextFieldDelegate {
+
+extension FeelFreeViewController: UITextFieldDelegate {
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		self.string = self.textField.text
 		return textField.resignFirstResponder()
