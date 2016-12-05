@@ -32,6 +32,7 @@ class Message: NSObject {
 	// MARK: - Properties
 	//**************************************************
 	
+	let message: String
 	let mentions: [String]
 	let emoticons: [String]
 	let colors: [String]
@@ -42,6 +43,7 @@ class Message: NSObject {
 	//**************************************************
 	
 	init(message: String) {
+		self.message	= message
 		self.mentions	= message.mentions()
 		self.emoticons	= message.emoticons()
 		self.colors		= message.colors()
@@ -63,10 +65,18 @@ class Message: NSObject {
 	func output() -> String {
 		var output = ""
 		var dictionary = [String : [Any]]()
-		dictionary["mentions"]	= self.mentions
-		dictionary["emoticons"] = self.emoticons
-		dictionary["colors"]	= self.colors
-		dictionary["links"]		= self.links
+		if self.mentions.count > 0 {
+			dictionary["mentions"] = self.mentions
+		}
+		if self.emoticons.count > 0 {
+			dictionary["emoticons"] = self.emoticons
+		}
+		if self.colors.count > 0 {
+			dictionary["colors"] = self.colors
+		}
+		if self.links.count > 0 {
+			dictionary["links"]	= self.links
+		}
 		do {
 			let data = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
 			if let JSONString = String(data: data, encoding: .utf8) {

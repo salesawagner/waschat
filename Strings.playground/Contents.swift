@@ -2,83 +2,90 @@
 
 import UIKit
 
-class Link: NSObject {
-	
-	let url: String
-	var title: String = ""
-	
-	init(url: String) {
-		self.url = url
-		if let url = URL(string: url) {
-			do {
-				let contents = try String(contentsOf: url)
-				self.title = contents.URLTitle()
-			} catch let e {
-				print("contents could not be loaded: \(e)")
-			}
-		}
-	}
-	
-	func toDictionary() -> Dictionary<String, String> {
-		var dictionary = [String : String]()
-		dictionary["url"]	= self.url
-		dictionary["title"] = self.title
-		return dictionary
-	}
-}
-
 class Message: NSObject {
+	
+	//**************************************************
+	// MARK: - Properties
+	//**************************************************
+	
+	let message: String
 	let mentions: [String]
 	let emoticons: [String]
 	let colors: [String]
-	let links: [Link]
+	let links: [[String : String]]
+	
+	//**************************************************
+	// MARK: - Constructors
+	//**************************************************
 	
 	init(message: String) {
+		self.message	= message
 		self.mentions	= message.mentions()
 		self.emoticons	= message.emoticons()
 		self.colors		= message.colors()
 		self.links		= message.URLs()
 	}
 	
+	//**************************************************
+	// MARK: - Private Methods
+	//**************************************************
+	
+	//**************************************************
+	// MARK: - Internal Methods
+	//**************************************************
+	
+	//**************************************************
+	// MARK: - Public Methods
+	//**************************************************
+	
 	func output() -> String {
 		var output = ""
 		var dictionary = [String : [Any]]()
-		dictionary["mentions"]	= self.mentions
-		dictionary["colors"]	= self.mentions
-		dictionary["emoticons"] = self.emoticons
-		
-		var links = [[String : String]]()
-		for link in self.links {
-			links.append(link.toDictionary())
+		if self.mentions.count > 0 {
+			dictionary["mentions"] = self.mentions
 		}
-		dictionary["links"] = links
-		
+		if self.emoticons.count > 0 {
+			dictionary["emoticons"] = self.emoticons
+		}
+		if self.colors.count > 0 {
+			dictionary["colors"] = self.colors
+		}
+		if self.links.count > 0 {
+			dictionary["links"]	= self.links
+		}
 		do {
 			let data = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
-			if let JSONString = String(data: data, encoding: String.Encoding.utf8) {
-				output = JSONString
+			if let JSONString = String(data: data, encoding: .utf8) {
+				output = JSONString.replacingOccurrences(of: "\\", with: "")
 			}
 		} catch let e {
 			print("message could not be serialized: \(e)")
 		}
 		return output
 	}
+	
+	//**************************************************
+	// MARK: - Override Public Methods
+	//**************************************************
+	
 }
 
 
 extension String {
+	var WASlocalized: String {
+		return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
+	}
 	func trim() -> String {
 		return self.trimmingCharacters(in: .whitespacesAndNewlines)
 	}
-	func removeFirst() -> String {
-		var string = self
-		return String(string.remove(at: string.startIndex))
+	func remove(_ string: String) -> String {
+		return self.replacingOccurrences(of: string, with: "")
 	}
 	func WASMatchesForRegex(regex: String) -> [String] {
 		do {
 			let regex	= try NSRegularExpression(pattern: regex, options: [])
 			let range	= NSMakeRange(0, self.characters.count)
-			let ranges	= regex.matches(in: self.trim(), options: .reportCompletion, range: range)
+			let ranges	= regex.matches(in: self, options: .reportCompletion, range: range)
 			return ranges.map {
 				let nSString = self as NSString
 				return nSString.substring(with: $0.range)
@@ -93,7 +100,8 @@ extension String {
 		let regex = String(format: "(?<=\\W|^)@(\\w+)")
 		let mentions = self.WASMatchesForRegex(regex: regex)
 		for mention in mentions {
-			strings.append(mention)
+			let string = mention.remove("@")
+			strings.append(string)
 		}
 		return strings
 	}
@@ -104,27 +112,65 @@ extension String {
 		
 		for emoticon in emoticons {
 			var string = emoticon
-			string = string.replacingOccurrences(of: "(", with: "")
-			string = string.replacingOccurrences(of: ")", with: "")
+			string = string.remove("(").remove(")")
 			strings.append(string)
 		}
 		return strings
 	}
-	func URLs() -> [Link] {
-		let regex = "https?://([-\\w\\.]+)+(:\\d+)?(/([\\w/_\\.]*(\\?\\S+)?)?)?"
+	func URLs() -> [[String : String]] {
+		let regex = "((https?)\\:\\/\\/)[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(\\/\\S*)?\\w+"
 		let URLs = self.WASMatchesForRegex(regex: regex)
-		var links = [Link]()
-		for url in URLs {
-			links.append(Link(url: url))
+		var links = [[String : String]]()
+		for link in URLs {
+			if let url = URL(string: link) {
+				var dictionary = [String : String]()
+				dictionary["url"] = link
+				do {
+					/*
+					errSSLHostNameMismatch -9843 The host name you connected with does not match any of
+					the host names allowed by the certificate. This is commonly caused by an incorrect
+					value for the kCFStreamSSLPeerName property within the dictionary associated with
+					the stream’s kCFStreamPropertySSLSettings key. Available in OS X v10.4 and later.
+					*/
+					let page = try String(contentsOf: url, encoding: .utf8)
+					let title = page.pageTitle()
+					dictionary["title"] = title
+				} catch let erro {
+					print("contents could not be loaded:")
+					print("link: \(link)")
+					print("erro: \(erro)")
+				}
+				links.append(dictionary)
+			}
 		}
 		return links
 	}
-	func URLTitle() -> String {
+	func pageTitle() -> String {
 		var string = ""
 		let regex = "(?<=\\<title\\>)(\\s*.*\\s*)(?=\\<\\/title\\>)"
 		let titles = self.WASMatchesForRegex(regex: regex)
 		if let title = titles.first {
 			string = title
+		}
+		
+		let encodedData = string.data(using: .utf8)!
+		let attributedOptions: [String : Any] = [
+			NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+			NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue
+		]
+		do {
+			let attributedString = try NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
+			string = attributedString.string.remove("\"")
+		} catch {
+			print("Error: \(error)")
+		}
+		return string.abbreviation(54)
+	}
+	func abbreviation(_ characteres: Int) -> String {
+		var string = self
+		if string.characters.count > characteres {
+			let index = string.index(string.startIndex, offsetBy: characteres)
+			string = string.substring(to: index) + "..."
 		}
 		return string
 	}
@@ -135,7 +181,7 @@ extension String {
 		let colors = colorString.WASMatchesForRegex(regex: regex)
 		for color in colors {
 			if (color.toColor() != nil) {
-				strings.append(color)
+				strings.append(color.remove("#"))
 			}
 		}
 		return strings
@@ -145,8 +191,7 @@ extension String {
 		guard string.hasPrefix("#"), string.characters.count == 7 else {
 			return nil
 		}
-		string = string.uppercased()
-		string = string.removeFirst()
+		string = string.uppercased().remove("#")
 		
 		var rgbValue: UInt32 = 0
 		Scanner(string: string).scanHexInt32(&rgbValue)
@@ -159,8 +204,6 @@ extension String {
 	}
 }
 
-var str = "@bob @john @wagner_ @google,@hipchat@pru (success) such a cool feature; http://twitter.com/jdorfman/status/430511497475670016 #00ffff00 salesawagner@gmail.com"
+//{\n  "links" : [\n    {\n      "url" : "http://www.nbcolympics.com",\n      "title" : "2016 Rio Olympic Games | NBC Olympics"\n    }\n  ]\n}"
 
-
-let message = Message(message: str)
-message.output()
+Message(message: "Olympics are starting soon;http://www.nbcolympics.com").output()

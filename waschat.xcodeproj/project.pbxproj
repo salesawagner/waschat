@@ -13,7 +13,6 @@
 		A78C469D1DF1957000A97417 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A78C46721DF1957000A97417 /* Localizable.strings */; };
 		A78C469E1DF1957000A97417 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A78C46761DF1957000A97417 /* LaunchScreen.storyboard */; };
 		A78C469F1DF1957000A97417 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A78C46771DF1957000A97417 /* Main.storyboard */; };
-		A78C46A01DF1957000A97417 /* Cupertino.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A78C46791DF1957000A97417 /* Cupertino.gpx */; };
 		A78C46A21DF1957000A97417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C467C1DF1957000A97417 /* AppDelegate.swift */; };
 		A78C46A31DF1957000A97417 /* WASTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C467F1DF1957000A97417 /* WASTableViewController.swift */; };
 		A78C46A41DF1957000A97417 /* WASViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46801DF1957000A97417 /* WASViewController.swift */; };
@@ -29,6 +28,7 @@
 		A78C46AF1DF1957000A97417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46941DF1957000A97417 /* ViewController.swift */; };
 		A78C46B01DF1957000A97417 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C46961DF1957000A97417 /* EmptyViewController.swift */; };
 		A7F1D68F1DF42CEC00D2BEB8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F1D68E1DF42CEC00D2BEB8 /* Message.swift */; };
+		A7F7FC7B1DF4DB9A00EFBEB8 /* WASStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F7FC7A1DF4DB9A00EFBEB8 /* WASStringTests.swift */; };
 		CFF2B884AE4442149FCE472F /* Pods_waschat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B39087FF25FAEE103DC4AF /* Pods_waschat.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,6 @@
 		A78C46731DF1957000A97417 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A78C46761DF1957000A97417 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A78C46771DF1957000A97417 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		A78C46791DF1957000A97417 /* Cupertino.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Cupertino.gpx; sourceTree = "<group>"; };
 		A78C467A1DF1957000A97417 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A78C467C1DF1957000A97417 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A78C467F1DF1957000A97417 /* WASTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WASTableViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		A7AAD4621DF1902200C481ED /* waschat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = waschat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7AAD4761DF1902200C481ED /* waschatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = waschatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F1D68E1DF42CEC00D2BEB8 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A7F7FC7A1DF4DB9A00EFBEB8 /* WASStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WASStringTests.swift; path = Extensions/WASStringTests.swift; sourceTree = "<group>"; };
 		FBFA8DD7FFC81F3719936A10 /* Pods-waschatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-waschatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-waschatTests/Pods-waschatTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,7 +136,6 @@
 		A78C46781DF1957000A97417 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A78C46791DF1957000A97417 /* Cupertino.gpx */,
 				A78C467A1DF1957000A97417 /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -289,6 +288,7 @@
 		A78C469B1DF1957000A97417 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A7F7FC791DF4DB7600EFBEB8 /* Extension */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -312,6 +312,14 @@
 				A7AAD4761DF1902200C481ED /* waschatTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A7F7FC791DF4DB7600EFBEB8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A7F7FC7A1DF4DB9A00EFBEB8 /* WASStringTests.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		F044A81A604DE43999D37A1E /* Pods */ = {
@@ -385,6 +393,7 @@
 					};
 					A7AAD4751DF1902200C481ED = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A7AAD4611DF1902200C481ED;
 					};
@@ -414,7 +423,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A78C46A01DF1957000A97417 /* Cupertino.gpx in Resources */,
 				A78C469E1DF1957000A97417 /* LaunchScreen.storyboard in Resources */,
 				A78C469C1DF1957000A97417 /* Assets.xcassets in Resources */,
 				A78C469D1DF1957000A97417 /* Localizable.strings in Resources */,
@@ -552,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F7FC7B1DF4DB9A00EFBEB8 /* WASStringTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,10 +715,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/Resources/Supporting Files/Info.plist\n";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Resources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.wagnersales.waschatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/waschat.app/waschat";
 			};
@@ -721,7 +732,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/Resources/Supporting Files/Info.plist\n";
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Tests/Resources/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.wagnersales.waschatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

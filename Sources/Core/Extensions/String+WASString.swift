@@ -15,9 +15,8 @@ extension String {
 	func trim() -> String {
 		return self.trimmingCharacters(in: .whitespacesAndNewlines)
 	}
-	func removeFirst() -> String {
-		var string = self
-		return String(string.remove(at: string.startIndex))
+	func remove(_ string: String) -> String {
+		return self.replacingOccurrences(of: string, with: "")
 	}
 	func WASMatchesForRegex(regex: String) -> [String] {
 		do {
@@ -38,7 +37,8 @@ extension String {
 		let regex = String(format: "(?<=\\W|^)@(\\w+)")
 		let mentions = self.WASMatchesForRegex(regex: regex)
 		for mention in mentions {
-			strings.append(mention)
+			let string = mention.remove("@")
+			strings.append(string)
 		}
 		return strings
 	}
@@ -49,8 +49,7 @@ extension String {
 		
 		for emoticon in emoticons {
 			var string = emoticon
-			string = string.replacingOccurrences(of: "(", with: "")
-			string = string.replacingOccurrences(of: ")", with: "")
+			string = string.remove("(").remove(")")
 			strings.append(string)
 		}
 		return strings
@@ -90,7 +89,7 @@ extension String {
 		if let title = titles.first {
 			string = title
 		}
-		
+
 		let encodedData = string.data(using: .utf8)!
 		let attributedOptions: [String : Any] = [
 			NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
@@ -98,14 +97,17 @@ extension String {
 		]
 		do {
 			let attributedString = try NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
-			string = attributedString.string
+			string = attributedString.string.remove("\"")
 		} catch {
 			print("Error: \(error)")
 		}
-		
-		if string.characters.count > 47 {
-			let index = string.index(string.startIndex, offsetBy: 47)
-//			string = string.substring(to: index) + "..."
+		return string.abbreviation(54)
+	}
+	func abbreviation(_ characteres: Int) -> String {
+		var string = self
+		if string.characters.count > characteres {
+			let index = string.index(string.startIndex, offsetBy: characteres)
+			string = string.substring(to: index) + "..."
 		}
 		return string
 	}
@@ -116,7 +118,7 @@ extension String {
 		let colors = colorString.WASMatchesForRegex(regex: regex)
 		for color in colors {
 			if (color.toColor() != nil) {
-				strings.append(color)
+				strings.append(color.remove("#"))
 			}
 		}
 		return strings
@@ -126,8 +128,7 @@ extension String {
 		guard string.hasPrefix("#"), string.characters.count == 7 else {
 			return nil
 		}
-		string = string.uppercased()
-		string = string.removeFirst()
+		string = string.uppercased().remove("#")
 		
 		var rgbValue: UInt32 = 0
 		Scanner(string: string).scanHexInt32(&rgbValue)
