@@ -1,7 +1,6 @@
 language: objective-c
 osx_image: xcode8.1
-xcode_project: waschat.xcworkspace
-xcode_scheme: waschat
+xcode_project: ./waschat.xcodeproj
 xcode_sdk: iphonesimulator10.1
 
 before_install:
@@ -13,7 +12,7 @@ install:
 - bundle install --without=documentation --path ../travis_bundle_dir
 
 script:
-- xcodebuild -workspace waschat.xcworkspace -scheme waschat -destination "platform=iOS Simulator,name=iPhone 6s,OS=10.1" clean test | xcpretty
+- xcodebuild -scheme waschat -destination "platform=iOS Simulator,name=iPhone 6s,OS=10.1" clean test | xcpretty
 
 after_success: 
   - slather

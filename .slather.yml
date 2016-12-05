@@ -1,6 +1,5 @@
 ci_service: travis_ci
 coverage_service: cobertura_xml
-workspace: ./waschat.xcworkspace
 xcodeproj: ./waschat.xcodeproj
 scheme: waschat
 source_directory: ./Sources/
