@@ -31,13 +31,20 @@ extension String {
 		return string
 	}
 	
+	func validHexNumber() -> Bool {
+		let chars = NSCharacterSet(charactersIn: "0123456789ABCDEF").inverted
+		guard self.uppercased().rangeOfCharacter(from: chars) != nil else {
+			return true
+		}
+		return false
+	}
+	
 	func toColor() -> UIColor? {
 		var string = self.trim()
-		guard string.hasPrefix("#"), string.characters.count == 7 else {
+		string = string.uppercased()
+		guard string.hasPrefix("#"), string.characters.count == 7, string.remove("#").validHexNumber() else {
 			return nil
-		}
-		string = string.uppercased().remove("#")
-		
+		}		
 		var rgbValue: UInt32 = 0
 		Scanner(string: string).scanHexInt32(&rgbValue)
 		let divisor = CGFloat(255)
@@ -50,16 +57,13 @@ extension String {
 	
 	func WASMatchesForRegex(regex: String) -> [String] {
 		var strings = [""]
-		do {
-			let regex	= try NSRegularExpression(pattern: regex, options: [])
+		if let regex	= try? NSRegularExpression(pattern: regex, options: []) {
 			let range	= NSMakeRange(0, self.characters.count)
 			let ranges	= regex.matches(in: self, options: .reportCompletion, range: range)
 			strings = ranges.map {
 				let nSString = self as NSString
 				return nSString.substring(with: $0.range)
 			}
-		} catch let e {
-			print("WASMatchesForRegex error: \(e)")
 		}
 		return strings
 	}

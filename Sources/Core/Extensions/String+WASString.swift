@@ -115,11 +115,8 @@ extension String {
 			NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
 			NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue
 		]
-		do {
-			let attributedString = try NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
+		if let attributedString = try? NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil) {
 			string = attributedString.string.remove("\"")
-		} catch {
-			print("Error: \(error)")
 		}
 		return string.abbreviation(54)
 	}
@@ -148,13 +145,10 @@ extension String {
 		if links.count > 0 {
 			dictionary["links"]	= links
 		}
-		do {
-			let data = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
+		if let data = try? JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted) {
 			if let JSONString = String(data: data, encoding: .utf8) {
 				output = JSONString.replacingOccurrences(of: "\\", with: "")
 			}
-		} catch let e {
-			print("message could not be serialized: \(e)")
 		}
 		return output
 	}
