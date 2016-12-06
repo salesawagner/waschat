@@ -26,21 +26,12 @@ import UIKit
 //
 //**************************************************************************************************
 
-class FeelFreeViewController: UIViewController {
-
+class FeelFreeViewController: WASViewController {
+	
 	//**************************************************
 	// MARK: - Properties
 	//**************************************************
 	
-	var string: String? {
-		didSet {
-			self.textField.text = ""
-			self.inputLabel.text = self.string
-			self.updateTextView()
-		}
-	}
-	@IBOutlet weak var inputLabel: UILabel!
-	@IBOutlet weak var textView: UITextView!
 	@IBOutlet weak var textField: UITextField!
 	@IBOutlet weak var bottomConstraint: NSLayoutConstraint!
 	
@@ -58,11 +49,9 @@ class FeelFreeViewController: UIViewController {
 		notificationCenter.addObserver(self, selector: #selector(self.keyboardWillHide(notification:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
 	}
 	
-	private func updateTextView() {
-		if let str = self.string {
-			let message = Message(message: str)
-			self.textView.text = message.output()
-		}
+	fileprivate func setMessage(message: String?) {
+		self.string = message
+		self.textField.text = ""
 	}
 	
 	//**************************************************
@@ -108,7 +97,7 @@ class FeelFreeViewController: UIViewController {
 	}
 	
 	@IBAction internal func sendButtonTapped(_ sender: Any) {
-		self.string = self.textField.text
+		self.setMessage(message: self.textField.text)
 	}
 	
 	//**************************************************
@@ -139,7 +128,7 @@ class FeelFreeViewController: UIViewController {
 
 extension FeelFreeViewController: UITextFieldDelegate {
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-		self.string = self.textField.text
+		self.setMessage(message: self.textField.text)
 		return textField.resignFirstResponder()
 	}
 }

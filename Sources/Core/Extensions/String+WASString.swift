@@ -8,18 +8,38 @@
 
 import UIKit
 
+//**************************************************************************************************
+//
+// MARK: - Definitions -
+//
+//**************************************************************************************************
+
+typealias Completion = (_ output: String) -> Void
+
+//**************************************************************************************************
+//
+// MARK: - Extension -
+//
+//**************************************************************************************************
+
 extension String {
-	func mentions() -> [String] {
+	
+	//**************************************************
+	// MARK: - Properties
+	//**************************************************
+	
+	var mentions: [String] {
 		var strings = [String]()
 		let regex = String(format: "(?<=\\W|^)@(\\w+)")
-		let mentions = self.WASMatchesForRegex(regex: regex)
-		for mention in mentions {
+		let matches = self.WASMatchesForRegex(regex: regex)
+		for mention in matches {
 			let string = mention.remove("@")
 			strings.append(string)
 		}
 		return strings
 	}
-	func emoticons() -> [String] {
+	
+	var emoticons: [String] {
 		var strings = [String]()
 		let regex = "\\(([A-za-z0-9]{1,15})\\)"
 		let emoticons = self.WASMatchesForRegex(regex: regex)
@@ -30,20 +50,39 @@ extension String {
 		}
 		return strings
 	}
-	func URLs() -> [[String : String]] {
-		let regex = "((https?)\\:\\/\\/)[a-zA-Z0-9\\-\\.]+\\.[a-zA-Z]{2,3}(\\/\\S*)?\\w+"
-		let URLs = self.WASMatchesForRegex(regex: regex)
+	
+	var colors: [String] {
+		var strings = [String]()
+		let regex = String(format: "#(?:[0-9A-Fa-f]{2}){3}")
+		let colorString = self.uppercased()
+		let colors = colorString.WASMatchesForRegex(regex: regex)
+		for color in colors {
+			if (color.toColor() != nil) {
+				strings.append(color.remove("#"))
+			}
+		}
+		return strings
+	}
+	
+	var links: [[String : String]] {
 		var links = [[String : String]]()
+		var regex = "((?:http|https)://)?"
+		regex += "(?:www\\.)?"
+		regex += "[\\w\\d\\-_]+\\.\\w{2,3}"
+		regex += "(\\.\\w{2})?"
+		regex += "(/(?<=/)"
+		regex += "(?:[\\w\\d\\-./_]+)?)?"
+		let URLs = self.WASMatchesForRegex(regex: regex)
 		for link in URLs {
 			if let url = URL(string: link) {
 				var dictionary = [String : String]()
 				dictionary["url"] = link
 				do {
 					/*
-						errSSLHostNameMismatch -9843 The host name you connected with does not match any of 
-						the host names allowed by the certificate. This is commonly caused by an incorrect 
-						value for the kCFStreamSSLPeerName property within the dictionary associated with 
-						the stream’s kCFStreamPropertySSLSettings key. Available in OS X v10.4 and later.
+					errSSLHostNameMismatch -9843 The host name you connected with does not match any of
+					the host names allowed by the certificate. This is commonly caused by an incorrect
+					value for the kCFStreamSSLPeerName property within the dictionary associated with
+					the stream’s kCFStreamPropertySSLSettings key. Available in OS X v10.4 and later.
 					*/
 					let page = try String(contentsOf: url, encoding: .utf8)
 					let title = page.pageTitle()
@@ -58,14 +97,19 @@ extension String {
 		}
 		return links
 	}
-	func pageTitle() -> String {
+	
+	//**************************************************
+	// MARK: - Private Methods
+	//**************************************************
+	
+	private func pageTitle() -> String {
 		var string = ""
 		let regex = "(?<=\\<title\\>)(\\s*.*\\s*)(?=\\<\\/title\\>)"
 		let titles = self.WASMatchesForRegex(regex: regex)
 		if let title = titles.first {
 			string = title
 		}
-
+		
 		let encodedData = string.data(using: .utf8)!
 		let attributedOptions: [String : Any] = [
 			NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
@@ -79,40 +123,48 @@ extension String {
 		}
 		return string.abbreviation(54)
 	}
-	func abbreviation(_ characteres: Int) -> String {
-		var string = self
-		if string.characters.count > characteres {
-			let index = string.index(string.startIndex, offsetBy: characteres)
-			string = string.substring(to: index) + "..."
+	
+	//**************************************************
+	// MARK: - Public Methods
+	//**************************************************
+	
+	func output() -> String {
+		var output = ""
+		let mentions	= self.mentions
+		let emoticons	= self.emoticons
+		let colors		= self.colors
+		let links		= self.links
+		
+		var dictionary = [String : [Any]]()
+		if mentions.count > 0 {
+			dictionary["mentions"] = mentions
 		}
-		return string
+		if emoticons.count > 0 {
+			dictionary["emoticons"] = emoticons
+		}
+		if colors.count > 0 {
+			dictionary["colors"] = colors
+		}
+		if links.count > 0 {
+			dictionary["links"]	= links
+		}
+		do {
+			let data = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
+			if let JSONString = String(data: data, encoding: .utf8) {
+				output = JSONString.replacingOccurrences(of: "\\", with: "")
+			}
+		} catch let e {
+			print("message could not be serialized: \(e)")
+		}
+		return output
 	}
-	func colors() -> [String] {
-		var strings = [String]()
-		let regex = String(format: "#(?:[0-9A-Fa-f]{2}){3}")
-		let colorString = self.uppercased()
-		let colors = colorString.WASMatchesForRegex(regex: regex)
-		for color in colors {
-			if (color.toColor() != nil) {
-				strings.append(color.remove("#"))
+	
+	func asyncOutput(completion: @escaping Completion) {
+		DispatchQueue.global(qos: .background).async {
+			let output = self.output()
+			DispatchQueue.main.async {
+				completion(output)
 			}
 		}
-		return strings
-	}
-	func toColor() -> UIColor? {
-		var string = self.trim()
-		guard string.hasPrefix("#"), string.characters.count == 7 else {
-			return nil
-		}
-		string = string.uppercased().remove("#")
-		
-		var rgbValue: UInt32 = 0
-		Scanner(string: string).scanHexInt32(&rgbValue)
-		let divisor = CGFloat(255)
-		let red     = CGFloat((rgbValue & 0xFF000000) >> 24) / divisor
-		let green   = CGFloat((rgbValue & 0x00FF0000) >> 16) / divisor
-		let blue    = CGFloat((rgbValue & 0x0000FF00) >>  8) / divisor
-		let alpha   = CGFloat( rgbValue & 0x000000FF       ) / divisor
-		return UIColor(red: red, green: green, blue: blue, alpha: alpha)
 	}
 }

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WASViewController.swift
 //  waschat
 //
 //  Created by Wagner Sales on 02/12/16.
@@ -27,14 +27,19 @@ import UIKit
 //**************************************************************************************************
 
 class WASViewController: UIViewController {
-
+	
 	//**************************************************
 	// MARK: - Properties
 	//**************************************************
 	
-	var string: String?
+	var string: String? {
+		didSet {
+			self.updateUI()
+		}
+	}
 	@IBOutlet weak var inputLabel: UILabel!
 	@IBOutlet weak var textView: UITextView!
+	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 	
 	//**************************************************
 	// MARK: - Constructors
@@ -44,11 +49,14 @@ class WASViewController: UIViewController {
 	// MARK: - Private Methods
 	//**************************************************
 	
-	private func updateTextView() {
-		if let str = self.string {
-			self.inputLabel.text = str
-			let message = Message(message: str)
-			self.textView.text = message.output()
+	private func updateUI() {
+		if let str = self.string, let inputLabel = self.inputLabel {
+			inputLabel.text = self.string
+			self.activityIndicator.startAnimating()
+			str.asyncOutput(completion: { (output) in
+				self.textView.text = output
+				self.activityIndicator.stopAnimating()
+			})
 		}
 	}
 	
@@ -66,6 +74,6 @@ class WASViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		self.updateTextView()
+		self.updateUI()
 	}
 }
