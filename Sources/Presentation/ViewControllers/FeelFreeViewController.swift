@@ -26,7 +26,7 @@ import UIKit
 //
 //**************************************************************************************************
 
-class FeelFreeViewController: WASViewController {
+class FeelFreeViewController: UIViewController {
 	
 	//**************************************************
 	// MARK: - Properties
@@ -34,6 +34,7 @@ class FeelFreeViewController: WASViewController {
 	
 	@IBOutlet weak var textField: UITextField!
 	@IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+	var viewController: WASViewController!
 	
 	//**************************************************
 	// MARK: - Constructors
@@ -50,8 +51,8 @@ class FeelFreeViewController: WASViewController {
 	}
 	
 	fileprivate func setMessage(message: String?) {
-		self.string = message
 		self.textField.text = ""
+		self.viewController.string = message
 	}
 	
 	//**************************************************
@@ -111,6 +112,14 @@ class FeelFreeViewController: WASViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.setupKeyBoardNotifications()
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "FreeParseContainerSegue" {
+			if let viewController = segue.destination as? WASViewController {
+				self.viewController = viewController
+			}
+		}
 	}
 	
 	deinit {

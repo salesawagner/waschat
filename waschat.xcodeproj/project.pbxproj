@@ -19,6 +19,7 @@
 		A778A6151DF5278000414EA4 /* FeelFreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A6001DF5278000414EA4 /* FeelFreeViewController.swift */; };
 		A778A6161DF5278000414EA4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A6011DF5278000414EA4 /* TableViewController.swift */; };
 		A778A6171DF5278000414EA4 /* WASViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A6021DF5278000414EA4 /* WASViewController.swift */; };
+		A78B1CD51DF68EC600FD1F95 /* ParseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78B1CD41DF68EC600FD1F95 /* ParseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		A778A6021DF5278000414EA4 /* WASViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WASViewController.swift; sourceTree = "<group>"; };
 		A778A6061DF5278000414EA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A778A6091DF5278000414EA4 /* WASStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WASStringTests.swift; sourceTree = "<group>"; };
+		A78B1CD41DF68EC600FD1F95 /* ParseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				A778A6001DF5278000414EA4 /* FeelFreeViewController.swift */,
 				A778A6011DF5278000414EA4 /* TableViewController.swift */,
 				A778A6021DF5278000414EA4 /* WASViewController.swift */,
+				A78B1CD41DF68EC600FD1F95 /* ParseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				A778A60E1DF5278000414EA4 /* AppDelegate.swift in Sources */,
 				A778A6101DF5278000414EA4 /* String+WASUtil.swift in Sources */,
 				A778A60F1DF5278000414EA4 /* String+WASString.swift in Sources */,
+				A78B1CD51DF68EC600FD1F95 /* ParseViewController.swift in Sources */,
 				A778A6151DF5278000414EA4 /* FeelFreeViewController.swift in Sources */,
 				A778A6171DF5278000414EA4 /* WASViewController.swift in Sources */,
 				A778A6111DF5278000414EA4 /* UIColor+WASColor.swift in Sources */,
