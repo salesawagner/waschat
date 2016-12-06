@@ -10,7 +10,7 @@ import UIKit
 
 extension UIFont {
 	class func WASFontWithSize(name: String = "Avenir-Book", _ fontSize: CGFloat = 14) -> UIFont {
-		return UIFont(name: "Avenir-Book", size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)
+		return UIFont(name: name, size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)
 	}
 	class func WASnavigationBarFont() -> UIFont {
 		let fontSize: CGFloat = 17

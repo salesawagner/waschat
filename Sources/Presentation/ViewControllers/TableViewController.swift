@@ -16,6 +16,7 @@ import UIKit
 
 private let kMentionsSegue	= "MentionsSegue"
 private let kEmoticonsSegue = "EmoticonsSegue"
+private let kColorsSegue	= "ColorsSegue"
 private let kLinksSegue		= "LinksSegue"
 private let kAllSegue		= "AllSegue"
 
@@ -45,6 +46,8 @@ class TableViewController: UITableViewController {
 					string = "@chris you around?"
 				case kEmoticonsSegue:
 					string = "Good morning! (megusta) (coffee)"
+				case kColorsSegue:
+					string = "Nice color #FFFFFF"
 				case kLinksSegue:
 					string = "Olympics are starting soon;http://www.nbcolympics.com"
 				case kAllSegue:
@@ -54,6 +57,9 @@ class TableViewController: UITableViewController {
 			}
 			if let viewController = segue.destination as? WASViewController {
 				viewController.string = string
+			}
+			if let viewController = segue.destination as? ParseViewController {
+				viewController.string = string!
 			}
 		}
     }

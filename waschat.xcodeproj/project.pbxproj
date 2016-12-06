@@ -16,11 +16,10 @@
 		A778A6101DF5278000414EA4 /* String+WASUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A5F31DF5278000414EA4 /* String+WASUtil.swift */; };
 		A778A6111DF5278000414EA4 /* UIColor+WASColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A5F41DF5278000414EA4 /* UIColor+WASColor.swift */; };
 		A778A6121DF5278000414EA4 /* UIFont+WASFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A5F51DF5278000414EA4 /* UIFont+WASFont.swift */; };
-		A778A6131DF5278000414EA4 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A5F71DF5278000414EA4 /* Definitions.swift */; };
-		A778A6141DF5278000414EA4 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A5FA1DF5278000414EA4 /* Message.swift */; };
 		A778A6151DF5278000414EA4 /* FeelFreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A6001DF5278000414EA4 /* FeelFreeViewController.swift */; };
 		A778A6161DF5278000414EA4 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A6011DF5278000414EA4 /* TableViewController.swift */; };
 		A778A6171DF5278000414EA4 /* WASViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A778A6021DF5278000414EA4 /* WASViewController.swift */; };
+		A78B1CD51DF68EC600FD1F95 /* ParseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78B1CD41DF68EC600FD1F95 /* ParseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,13 +44,12 @@
 		A778A5F31DF5278000414EA4 /* String+WASUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+WASUtil.swift"; sourceTree = "<group>"; };
 		A778A5F41DF5278000414EA4 /* UIColor+WASColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+WASColor.swift"; sourceTree = "<group>"; };
 		A778A5F51DF5278000414EA4 /* UIFont+WASFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+WASFont.swift"; sourceTree = "<group>"; };
-		A778A5F71DF5278000414EA4 /* Definitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
-		A778A5FA1DF5278000414EA4 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A778A6001DF5278000414EA4 /* FeelFreeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeelFreeViewController.swift; sourceTree = "<group>"; };
 		A778A6011DF5278000414EA4 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		A778A6021DF5278000414EA4 /* WASViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WASViewController.swift; sourceTree = "<group>"; };
 		A778A6061DF5278000414EA4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A778A6091DF5278000414EA4 /* WASStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WASStringTests.swift; sourceTree = "<group>"; };
+		A78B1CD41DF68EC600FD1F95 /* ParseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,30 +129,9 @@
 		A778A5EE1DF5278000414EA4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A778A5EF1DF5278000414EA4 /* Base */,
-				A778A5F01DF5278000414EA4 /* CustomClasses */,
 				A778A5F11DF5278000414EA4 /* Extensions */,
-				A778A5F61DF5278000414EA4 /* Helpers */,
-				A778A5F81DF5278000414EA4 /* Language */,
-				A778A5F91DF5278000414EA4 /* Models */,
-				A778A5FB1DF5278000414EA4 /* Network */,
-				A778A5FC1DF5278000414EA4 /* ViewModels */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		A778A5EF1DF5278000414EA4 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		A778A5F01DF5278000414EA4 /* CustomClasses */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomClasses;
 			sourceTree = "<group>";
 		};
 		A778A5F11DF5278000414EA4 /* Extensions */ = {
@@ -168,57 +145,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		A778A5F61DF5278000414EA4 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				A778A5F71DF5278000414EA4 /* Definitions.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		A778A5F81DF5278000414EA4 /* Language */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Language;
-			sourceTree = "<group>";
-		};
-		A778A5F91DF5278000414EA4 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				A778A5FA1DF5278000414EA4 /* Message.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		A778A5FB1DF5278000414EA4 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		A778A5FC1DF5278000414EA4 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		A778A5FD1DF5278000414EA4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				A778A5FE1DF5278000414EA4 /* Cells */,
 				A778A5FF1DF5278000414EA4 /* ViewControllers */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		A778A5FE1DF5278000414EA4 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		A778A5FF1DF5278000414EA4 /* ViewControllers */ = {
@@ -227,6 +159,7 @@
 				A778A6001DF5278000414EA4 /* FeelFreeViewController.swift */,
 				A778A6011DF5278000414EA4 /* TableViewController.swift */,
 				A778A6021DF5278000414EA4 /* WASViewController.swift */,
+				A78B1CD41DF68EC600FD1F95 /* ParseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -381,12 +314,11 @@
 				A778A60E1DF5278000414EA4 /* AppDelegate.swift in Sources */,
 				A778A6101DF5278000414EA4 /* String+WASUtil.swift in Sources */,
 				A778A60F1DF5278000414EA4 /* String+WASString.swift in Sources */,
+				A78B1CD51DF68EC600FD1F95 /* ParseViewController.swift in Sources */,
 				A778A6151DF5278000414EA4 /* FeelFreeViewController.swift in Sources */,
-				A778A6131DF5278000414EA4 /* Definitions.swift in Sources */,
 				A778A6171DF5278000414EA4 /* WASViewController.swift in Sources */,
 				A778A6111DF5278000414EA4 /* UIColor+WASColor.swift in Sources */,
 				A778A6161DF5278000414EA4 /* TableViewController.swift in Sources */,
-				A778A6141DF5278000414EA4 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
